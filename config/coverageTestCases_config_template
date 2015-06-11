@@ -1,0 +1,29 @@
+;----------------------------------------------------------
+; Configures the settings for the main app
+;
+;  TESTFILE	 : contains the data to load to test coverage
+
+[app]
+TESTFILE=../test/coverageTestCases.csv
+
+;----------------------------------------------------------
+; Configures the settings for the Riak cluster
+;
+;  HOME    	 : list of IP address of cluster nodes
+;  PORT    	 : port riak is running on
+[riak]
+CLUSTER=[<ip_addresses_go_here_quoted_and_comman_separated>]
+PORT=8087
+
+;----------------------------------------------------------
+; Configures the settings for ad hoc logging
+;
+;  LOGFILE    	 		: where you want the logfile to go
+;  LOGTIMEFORMAT   	 	: format for the timestamp in the log
+;  LOGFORMAT            : format for the log line
+;  LOGNAME              : name of the log
+[logging]
+logFile=/media/USB1/mine/git/public/riak/logs/coverageTest.log
+logTimeFormat=%Y-%m-%d %H:%M:%S
+logFormat=%(asctime)s %(levelname)s %(message)s
+logname="coverage"

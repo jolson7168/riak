@@ -1,0 +1,848 @@
+2015-06-11 13:59:59 INFO Starting Run: 20150611  ==============================
+2015-06-11 13:59:59 INFO Adding blocks. Start: 0 End: 501 Int: 10 Pay: /media/USB1/mine/git/public/riak/data/testBlock.dat
+2015-06-11 14:00:00 INFO  Block write coverageTest/0 Sz: 127368 Dur: 0.0
+2015-06-11 14:00:01 INFO  Block write coverageTest/10 Sz: 127368 Dur: 0.0
+2015-06-11 14:00:02 INFO  Block write coverageTest/20 Sz: 127368 Dur: 0.0
+2015-06-11 14:00:03 INFO  Block write coverageTest/30 Sz: 127368 Dur: 0.0
+2015-06-11 14:00:04 INFO  Block write coverageTest/40 Sz: 127368 Dur: 0.0
+2015-06-11 14:00:05 INFO  Block write coverageTest/50 Sz: 127368 Dur: 0.0
+2015-06-11 14:00:06 INFO  Block write coverageTest/60 Sz: 127368 Dur: 0.0
+2015-06-11 14:00:07 INFO  Block write coverageTest/70 Sz: 127368 Dur: 0.0
+2015-06-11 14:00:08 INFO  Block write coverageTest/80 Sz: 127368 Dur: 0.0
+2015-06-11 14:00:09 INFO  Block write coverageTest/90 Sz: 127368 Dur: 0.0
+2015-06-11 14:00:10 INFO  Block write coverageTest/100 Sz: 127368 Dur: 0.0
+2015-06-11 14:00:11 INFO  Block write coverageTest/110 Sz: 127368 Dur: 0.0
+2015-06-11 14:00:11 INFO  Block write coverageTest/120 Sz: 127368 Dur: 0.0
+2015-06-11 14:00:12 INFO  Block write coverageTest/130 Sz: 127368 Dur: 0.0
+2015-06-11 14:00:13 INFO  Block write coverageTest/140 Sz: 127368 Dur: 0.0
+2015-06-11 14:00:14 INFO  Block write coverageTest/150 Sz: 127368 Dur: 0.0
+2015-06-11 14:00:15 INFO  Block write coverageTest/160 Sz: 127368 Dur: 0.0
+2015-06-11 14:00:16 INFO  Block write coverageTest/170 Sz: 127368 Dur: 0.0
+2015-06-11 14:00:17 INFO  Block write coverageTest/180 Sz: 127368 Dur: 0.0
+2015-06-11 14:00:29 INFO Starting Run: 20150611  ==============================
+2015-06-11 14:00:29 INFO Adding blocks. Start: 0 End: 501 Int: 10 Pay: /media/USB1/mine/git/public/riak/data/testBlock.dat
+2015-06-11 14:00:29 INFO  Block delete coverageTest/0 Duration: 0.041
+2015-06-11 14:00:30 INFO  Block delete coverageTest/10 Duration: 0.028
+2015-06-11 14:00:30 INFO  Block delete coverageTest/20 Duration: 0.025
+2015-06-11 14:00:30 INFO  Block delete coverageTest/30 Duration: 0.029
+2015-06-11 14:00:30 INFO  Block delete coverageTest/40 Duration: 0.026
+2015-06-11 14:00:30 INFO  Block delete coverageTest/50 Duration: 0.028
+2015-06-11 14:00:30 INFO  Block delete coverageTest/60 Duration: 0.033
+2015-06-11 14:00:31 INFO  Block delete coverageTest/70 Duration: 0.027
+2015-06-11 14:00:31 INFO  Block delete coverageTest/80 Duration: 0.032
+2015-06-11 14:00:31 INFO  Block delete coverageTest/90 Duration: 0.025
+2015-06-11 14:00:31 INFO  Block delete coverageTest/100 Duration: 0.024
+2015-06-11 14:00:31 INFO  Block delete coverageTest/110 Duration: 0.03
+2015-06-11 14:00:31 INFO  Block delete coverageTest/120 Duration: 0.028
+2015-06-11 14:00:32 INFO  Block delete coverageTest/130 Duration: 0.027
+2015-06-11 14:00:32 INFO  Block delete coverageTest/140 Duration: 0.025
+2015-06-11 14:00:32 INFO  Block delete coverageTest/150 Duration: 0.024
+2015-06-11 14:00:32 INFO  Block delete coverageTest/160 Duration: 0.027
+2015-06-11 14:00:32 INFO  Block delete coverageTest/170 Duration: 0.032
+2015-06-11 14:00:32 INFO  Block delete coverageTest/180 Duration: 0.029
+2015-06-11 14:00:32 INFO  Block delete coverageTest/190 Duration: 0.024
+2015-06-11 14:00:32 INFO  Block delete coverageTest/200 Duration: 0.027
+2015-06-11 14:00:33 INFO  Block delete coverageTest/210 Duration: 0.028
+2015-06-11 14:00:33 INFO  Block delete coverageTest/220 Duration: 0.026
+2015-06-11 14:00:33 INFO  Block delete coverageTest/230 Duration: 0.032
+2015-06-11 14:00:33 INFO  Block delete coverageTest/240 Duration: 0.027
+2015-06-11 14:00:33 INFO  Block delete coverageTest/250 Duration: 0.027
+2015-06-11 14:00:33 INFO  Block delete coverageTest/260 Duration: 0.022
+2015-06-11 14:00:33 INFO  Block delete coverageTest/270 Duration: 0.026
+2015-06-11 14:00:33 INFO  Block delete coverageTest/280 Duration: 0.023
+2015-06-11 14:00:33 INFO  Block delete coverageTest/290 Duration: 0.022
+2015-06-11 14:00:33 INFO  Block delete coverageTest/300 Duration: 0.022
+2015-06-11 14:00:33 INFO  Block delete coverageTest/310 Duration: 0.022
+2015-06-11 14:00:33 INFO  Block delete coverageTest/320 Duration: 0.023
+2015-06-11 14:00:33 INFO  Block delete coverageTest/330 Duration: 0.029
+2015-06-11 14:00:33 INFO  Block delete coverageTest/340 Duration: 0.027
+2015-06-11 14:00:33 INFO  Block delete coverageTest/350 Duration: 0.023
+2015-06-11 14:00:33 INFO  Block delete coverageTest/360 Duration: 0.023
+2015-06-11 14:00:33 INFO  Block delete coverageTest/370 Duration: 0.022
+2015-06-11 14:00:33 INFO  Block delete coverageTest/380 Duration: 0.026
+2015-06-11 14:00:33 INFO  Block delete coverageTest/390 Duration: 0.035
+2015-06-11 14:00:34 INFO  Block delete coverageTest/400 Duration: 0.026
+2015-06-11 14:00:34 INFO  Block delete coverageTest/410 Duration: 0.026
+2015-06-11 14:00:34 INFO  Block delete coverageTest/420 Duration: 0.026
+2015-06-11 14:00:34 INFO  Block delete coverageTest/430 Duration: 0.024
+2015-06-11 14:00:34 INFO  Block delete coverageTest/440 Duration: 0.026
+2015-06-11 14:00:34 INFO  Block delete coverageTest/450 Duration: 0.032
+2015-06-11 14:00:34 INFO  Block delete coverageTest/460 Duration: 0.027
+2015-06-11 14:00:34 INFO  Block delete coverageTest/470 Duration: 0.022
+2015-06-11 14:00:34 INFO  Block delete coverageTest/480 Duration: 0.041
+2015-06-11 14:00:34 INFO  Block delete coverageTest/490 Duration: 0.026
+2015-06-11 14:00:34 INFO  Block delete coverageTest/500 Duration: 0.021
+2015-06-11 14:00:34 INFO Adding blocks. Start: 5000 End: 6001 Int: 10 Pay: /media/USB1/mine/git/public/riak/data/testBlock.dat
+2015-06-11 14:00:34 INFO  Block delete coverageTest/5000 Duration: 0.026
+2015-06-11 14:00:34 INFO  Block delete coverageTest/5010 Duration: 0.027
+2015-06-11 14:00:34 INFO  Block delete coverageTest/5020 Duration: 0.043
+2015-06-11 14:00:34 INFO  Block delete coverageTest/5030 Duration: 0.031
+2015-06-11 14:00:34 INFO  Block delete coverageTest/5040 Duration: 0.024
+2015-06-11 14:00:34 INFO  Block delete coverageTest/5050 Duration: 0.03
+2015-06-11 14:00:34 INFO  Block delete coverageTest/5060 Duration: 0.022
+2015-06-11 14:00:35 INFO  Block delete coverageTest/5070 Duration: 0.026
+2015-06-11 14:00:35 INFO  Block delete coverageTest/5080 Duration: 0.026
+2015-06-11 14:00:35 INFO  Block delete coverageTest/5090 Duration: 0.027
+2015-06-11 14:00:35 INFO  Block delete coverageTest/5100 Duration: 0.027
+2015-06-11 14:00:35 INFO  Block delete coverageTest/5110 Duration: 0.027
+2015-06-11 14:00:35 INFO  Block delete coverageTest/5120 Duration: 0.024
+2015-06-11 14:00:35 INFO  Block delete coverageTest/5130 Duration: 0.022
+2015-06-11 14:00:35 INFO  Block delete coverageTest/5140 Duration: 0.026
+2015-06-11 14:00:35 INFO  Block delete coverageTest/5150 Duration: 0.022
+2015-06-11 14:00:35 INFO  Block delete coverageTest/5160 Duration: 0.038
+2015-06-11 14:00:35 INFO  Block delete coverageTest/5170 Duration: 0.024
+2015-06-11 14:00:35 INFO  Block delete coverageTest/5180 Duration: 0.022
+2015-06-11 14:00:35 INFO  Block delete coverageTest/5190 Duration: 0.026
+2015-06-11 14:00:35 INFO  Block delete coverageTest/5200 Duration: 0.026
+2015-06-11 14:00:35 INFO  Block delete coverageTest/5210 Duration: 0.026
+2015-06-11 14:00:35 INFO  Block delete coverageTest/5220 Duration: 0.023
+2015-06-11 14:00:35 INFO  Block delete coverageTest/5230 Duration: 0.026
+2015-06-11 14:00:35 INFO  Block delete coverageTest/5240 Duration: 0.027
+2015-06-11 14:00:36 INFO  Block delete coverageTest/5250 Duration: 0.035
+2015-06-11 14:00:36 INFO  Block delete coverageTest/5260 Duration: 0.026
+2015-06-11 14:00:36 INFO  Block delete coverageTest/5270 Duration: 0.027
+2015-06-11 14:00:36 INFO  Block delete coverageTest/5280 Duration: 0.026
+2015-06-11 14:00:36 INFO  Block delete coverageTest/5290 Duration: 0.033
+2015-06-11 14:00:36 INFO  Block delete coverageTest/5300 Duration: 0.026
+2015-06-11 14:00:36 INFO  Block delete coverageTest/5310 Duration: 0.026
+2015-06-11 14:00:36 INFO  Block delete coverageTest/5320 Duration: 0.023
+2015-06-11 14:00:36 INFO  Block delete coverageTest/5330 Duration: 0.026
+2015-06-11 14:00:36 INFO  Block delete coverageTest/5340 Duration: 0.022
+2015-06-11 14:00:36 INFO  Block delete coverageTest/5350 Duration: 0.022
+2015-06-11 14:00:36 INFO  Block delete coverageTest/5360 Duration: 0.026
+2015-06-11 14:00:36 INFO  Block delete coverageTest/5370 Duration: 0.028
+2015-06-11 14:00:36 INFO  Block delete coverageTest/5380 Duration: 0.026
+2015-06-11 14:00:36 INFO  Block delete coverageTest/5390 Duration: 0.029
+2015-06-11 14:00:36 INFO  Block delete coverageTest/5400 Duration: 0.022
+2015-06-11 14:00:36 INFO  Block delete coverageTest/5410 Duration: 0.022
+2015-06-11 14:00:36 INFO  Block delete coverageTest/5420 Duration: 0.022
+2015-06-11 14:00:36 INFO  Block delete coverageTest/5430 Duration: 0.023
+2015-06-11 14:00:37 INFO  Block delete coverageTest/5440 Duration: 0.022
+2015-06-11 14:00:37 INFO  Block delete coverageTest/5450 Duration: 0.021
+2015-06-11 14:00:37 INFO  Block delete coverageTest/5460 Duration: 0.033
+2015-06-11 14:00:37 INFO  Block delete coverageTest/5470 Duration: 0.026
+2015-06-11 14:00:37 INFO  Block delete coverageTest/5480 Duration: 0.026
+2015-06-11 14:00:37 INFO  Block delete coverageTest/5490 Duration: 0.022
+2015-06-11 14:00:37 INFO  Block delete coverageTest/5500 Duration: 0.027
+2015-06-11 14:00:37 INFO  Block delete coverageTest/5510 Duration: 0.022
+2015-06-11 14:00:37 INFO  Block delete coverageTest/5520 Duration: 0.022
+2015-06-11 14:00:37 INFO  Block delete coverageTest/5530 Duration: 0.022
+2015-06-11 14:00:37 INFO  Block delete coverageTest/5540 Duration: 0.027
+2015-06-11 14:00:37 INFO  Block delete coverageTest/5550 Duration: 0.026
+2015-06-11 14:00:37 INFO  Block delete coverageTest/5560 Duration: 0.026
+2015-06-11 14:00:37 INFO  Block delete coverageTest/5570 Duration: 0.026
+2015-06-11 14:00:37 INFO  Block delete coverageTest/5580 Duration: 0.026
+2015-06-11 14:00:37 INFO  Block delete coverageTest/5590 Duration: 0.027
+2015-06-11 14:00:37 INFO  Block delete coverageTest/5600 Duration: 0.027
+2015-06-11 14:00:37 INFO  Block delete coverageTest/5610 Duration: 0.026
+2015-06-11 14:00:37 INFO  Block delete coverageTest/5620 Duration: 0.022
+2015-06-11 14:00:37 INFO  Block delete coverageTest/5630 Duration: 0.038
+2015-06-11 14:00:38 INFO  Block delete coverageTest/5640 Duration: 0.022
+2015-06-11 14:00:38 INFO  Block delete coverageTest/5650 Duration: 0.073
+2015-06-11 14:00:38 INFO  Block delete coverageTest/5660 Duration: 0.023
+2015-06-11 14:00:38 INFO  Block delete coverageTest/5670 Duration: 0.025
+2015-06-11 14:00:38 INFO  Block delete coverageTest/5680 Duration: 0.027
+2015-06-11 14:00:38 INFO  Block delete coverageTest/5690 Duration: 0.022
+2015-06-11 14:00:38 INFO  Block delete coverageTest/5700 Duration: 0.026
+2015-06-11 14:00:38 INFO  Block delete coverageTest/5710 Duration: 0.022
+2015-06-11 14:00:38 INFO  Block delete coverageTest/5720 Duration: 0.022
+2015-06-11 14:00:38 INFO  Block delete coverageTest/5730 Duration: 0.028
+2015-06-11 14:00:38 INFO  Block delete coverageTest/5740 Duration: 0.026
+2015-06-11 14:00:38 INFO  Block delete coverageTest/5750 Duration: 0.027
+2015-06-11 14:00:38 INFO  Block delete coverageTest/5760 Duration: 0.022
+2015-06-11 14:00:38 INFO  Block delete coverageTest/5770 Duration: 0.026
+2015-06-11 14:00:38 INFO  Block delete coverageTest/5780 Duration: 0.034
+2015-06-11 14:00:38 INFO  Block delete coverageTest/5790 Duration: 0.035
+2015-06-11 14:00:38 INFO  Block delete coverageTest/5800 Duration: 0.027
+2015-06-11 14:00:38 INFO  Block delete coverageTest/5810 Duration: 0.026
+2015-06-11 14:00:39 INFO  Block delete coverageTest/5820 Duration: 0.026
+2015-06-11 14:00:39 INFO  Block delete coverageTest/5830 Duration: 0.026
+2015-06-11 14:00:39 INFO  Block delete coverageTest/5840 Duration: 0.043
+2015-06-11 14:00:39 INFO  Block delete coverageTest/5850 Duration: 0.045
+2015-06-11 14:00:39 INFO  Block delete coverageTest/5860 Duration: 0.025
+2015-06-11 14:00:39 INFO  Block delete coverageTest/5870 Duration: 0.022
+2015-06-11 14:00:39 INFO  Block delete coverageTest/5880 Duration: 0.026
+2015-06-11 14:00:39 INFO  Block delete coverageTest/5890 Duration: 0.026
+2015-06-11 14:00:39 INFO  Block delete coverageTest/5900 Duration: 0.022
+2015-06-11 14:00:39 INFO  Block delete coverageTest/5910 Duration: 0.026
+2015-06-11 14:00:39 INFO  Block delete coverageTest/5920 Duration: 0.028
+2015-06-11 14:00:39 INFO  Block delete coverageTest/5930 Duration: 0.026
+2015-06-11 14:00:39 INFO  Block delete coverageTest/5940 Duration: 0.026
+2015-06-11 14:00:39 INFO  Block delete coverageTest/5950 Duration: 0.026
+2015-06-11 14:00:39 INFO  Block delete coverageTest/5960 Duration: 0.026
+2015-06-11 14:00:39 INFO  Block delete coverageTest/5970 Duration: 0.026
+2015-06-11 14:00:39 INFO  Block delete coverageTest/5980 Duration: 0.026
+2015-06-11 14:00:39 INFO  Block delete coverageTest/5990 Duration: 0.026
+2015-06-11 14:00:39 INFO  Block delete coverageTest/6000 Duration: 0.022
+2015-06-11 14:00:39 INFO Adding blocks. Start: 8000 End: 8501 Int: 10 Pay: /media/USB1/mine/git/public/riak/data/testBlock.dat
+2015-06-11 14:00:40 INFO  Block delete coverageTest/8000 Duration: 0.022
+2015-06-11 14:00:40 INFO  Block delete coverageTest/8010 Duration: 0.022
+2015-06-11 14:00:40 INFO  Block delete coverageTest/8020 Duration: 0.029
+2015-06-11 14:00:40 INFO  Block delete coverageTest/8030 Duration: 0.026
+2015-06-11 14:00:40 INFO  Block delete coverageTest/8040 Duration: 0.027
+2015-06-11 14:00:40 INFO  Block delete coverageTest/8050 Duration: 0.026
+2015-06-11 14:00:40 INFO  Block delete coverageTest/8060 Duration: 0.028
+2015-06-11 14:00:40 INFO  Block delete coverageTest/8070 Duration: 0.026
+2015-06-11 14:00:40 INFO  Block delete coverageTest/8080 Duration: 0.023
+2015-06-11 14:00:40 INFO  Block delete coverageTest/8090 Duration: 0.027
+2015-06-11 14:00:40 INFO  Block delete coverageTest/8100 Duration: 0.026
+2015-06-11 14:00:40 INFO  Block delete coverageTest/8110 Duration: 0.022
+2015-06-11 14:00:40 INFO  Block delete coverageTest/8120 Duration: 0.026
+2015-06-11 14:00:40 INFO  Block delete coverageTest/8130 Duration: 0.026
+2015-06-11 14:00:40 INFO  Block delete coverageTest/8140 Duration: 0.031
+2015-06-11 14:00:40 INFO  Block delete coverageTest/8150 Duration: 0.03
+2015-06-11 14:00:40 INFO  Block delete coverageTest/8160 Duration: 0.027
+2015-06-11 14:00:40 INFO  Block delete coverageTest/8170 Duration: 0.029
+2015-06-11 14:00:40 INFO  Block delete coverageTest/8180 Duration: 0.027
+2015-06-11 14:00:41 INFO  Block delete coverageTest/8190 Duration: 0.026
+2015-06-11 14:00:41 INFO  Block delete coverageTest/8200 Duration: 0.102
+2015-06-11 14:00:41 INFO  Block delete coverageTest/8210 Duration: 0.026
+2015-06-11 14:00:41 INFO  Block delete coverageTest/8220 Duration: 0.027
+2015-06-11 14:00:41 INFO  Block delete coverageTest/8230 Duration: 0.022
+2015-06-11 14:00:41 INFO  Block delete coverageTest/8240 Duration: 0.024
+2015-06-11 14:00:41 INFO  Block delete coverageTest/8250 Duration: 0.023
+2015-06-11 14:00:41 INFO  Block delete coverageTest/8260 Duration: 0.022
+2015-06-11 14:00:41 INFO  Block delete coverageTest/8270 Duration: 0.026
+2015-06-11 14:00:41 INFO  Block delete coverageTest/8280 Duration: 0.027
+2015-06-11 14:00:41 INFO  Block delete coverageTest/8290 Duration: 0.026
+2015-06-11 14:00:41 INFO  Block delete coverageTest/8300 Duration: 0.023
+2015-06-11 14:00:41 INFO  Block delete coverageTest/8310 Duration: 0.022
+2015-06-11 14:00:41 INFO  Block delete coverageTest/8320 Duration: 0.026
+2015-06-11 14:00:41 INFO  Block delete coverageTest/8330 Duration: 0.027
+2015-06-11 14:00:41 INFO  Block delete coverageTest/8340 Duration: 0.026
+2015-06-11 14:00:41 INFO  Block delete coverageTest/8350 Duration: 0.026
+2015-06-11 14:00:41 INFO  Block delete coverageTest/8360 Duration: 0.03
+2015-06-11 14:00:42 INFO  Block delete coverageTest/8370 Duration: 0.036
+2015-06-11 14:00:42 INFO  Block delete coverageTest/8380 Duration: 0.061
+2015-06-11 14:00:42 INFO  Block delete coverageTest/8390 Duration: 0.023
+2015-06-11 14:00:42 INFO  Block delete coverageTest/8400 Duration: 0.027
+2015-06-11 14:00:42 INFO  Block delete coverageTest/8410 Duration: 0.027
+2015-06-11 14:00:42 INFO  Block delete coverageTest/8420 Duration: 0.023
+2015-06-11 14:00:42 INFO  Block delete coverageTest/8430 Duration: 0.026
+2015-06-11 14:00:42 INFO  Block delete coverageTest/8440 Duration: 0.022
+2015-06-11 14:00:42 INFO  Block delete coverageTest/8450 Duration: 0.026
+2015-06-11 14:00:42 INFO  Block delete coverageTest/8460 Duration: 0.026
+2015-06-11 14:00:42 INFO  Block delete coverageTest/8470 Duration: 0.022
+2015-06-11 14:00:42 INFO  Block delete coverageTest/8480 Duration: 0.026
+2015-06-11 14:00:42 INFO  Block delete coverageTest/8490 Duration: 0.022
+2015-06-11 14:00:42 INFO  Block delete coverageTest/8500 Duration: 0.026
+2015-06-11 14:00:59 INFO Starting Run: 20150611  ==============================
+2015-06-11 14:00:59 INFO Adding blocks. Start: 0 End: 501 Int: 10 Pay: /media/USB1/mine/git/public/riak/data/testBlock.dat
+2015-06-11 14:00:59 INFO  Block delete coverageTest/0 Duration: 0.03
+2015-06-11 14:00:59 INFO  Block delete coverageTest/10 Duration: 0.027
+2015-06-11 14:00:59 INFO  Block delete coverageTest/20 Duration: 0.023
+2015-06-11 14:00:59 INFO  Block delete coverageTest/30 Duration: 0.027
+2015-06-11 14:00:59 INFO  Block delete coverageTest/40 Duration: 0.023
+2015-06-11 14:00:59 INFO  Block delete coverageTest/50 Duration: 0.034
+2015-06-11 14:00:59 INFO  Block delete coverageTest/60 Duration: 0.022
+2015-06-11 14:00:59 INFO  Block delete coverageTest/70 Duration: 0.022
+2015-06-11 14:00:59 INFO  Block delete coverageTest/80 Duration: 0.037
+2015-06-11 14:00:59 INFO  Block delete coverageTest/90 Duration: 0.024
+2015-06-11 14:00:59 INFO  Block delete coverageTest/100 Duration: 0.043
+2015-06-11 14:01:00 INFO  Block delete coverageTest/110 Duration: 0.027
+2015-06-11 14:01:00 INFO  Block delete coverageTest/120 Duration: 0.023
+2015-06-11 14:01:00 INFO  Block delete coverageTest/130 Duration: 0.023
+2015-06-11 14:01:00 INFO  Block delete coverageTest/140 Duration: 0.024
+2015-06-11 14:01:00 INFO  Block delete coverageTest/150 Duration: 0.03
+2015-06-11 14:01:00 INFO  Block delete coverageTest/160 Duration: 0.024
+2015-06-11 14:01:00 INFO  Block delete coverageTest/170 Duration: 0.029
+2015-06-11 14:01:00 INFO  Block delete coverageTest/180 Duration: 0.03
+2015-06-11 14:01:00 INFO  Block delete coverageTest/190 Duration: 0.03
+2015-06-11 14:01:00 INFO  Block delete coverageTest/200 Duration: 0.051
+2015-06-11 14:01:00 INFO  Block delete coverageTest/210 Duration: 0.027
+2015-06-11 14:01:00 INFO  Block delete coverageTest/220 Duration: 0.027
+2015-06-11 14:01:00 INFO  Block delete coverageTest/230 Duration: 0.023
+2015-06-11 14:01:00 INFO  Block delete coverageTest/240 Duration: 0.028
+2015-06-11 14:01:00 INFO  Block delete coverageTest/250 Duration: 0.023
+2015-06-11 14:01:00 INFO  Block delete coverageTest/260 Duration: 0.023
+2015-06-11 14:01:00 INFO  Block delete coverageTest/270 Duration: 0.028
+2015-06-11 14:01:00 INFO  Block delete coverageTest/280 Duration: 0.04
+2015-06-11 14:01:01 INFO  Block delete coverageTest/290 Duration: 0.036
+2015-06-11 14:01:01 INFO  Block delete coverageTest/300 Duration: 0.024
+2015-06-11 14:01:01 INFO  Block delete coverageTest/310 Duration: 0.023
+2015-06-11 14:01:01 INFO  Block delete coverageTest/320 Duration: 0.023
+2015-06-11 14:01:01 INFO  Block delete coverageTest/330 Duration: 0.022
+2015-06-11 14:01:01 INFO  Block delete coverageTest/340 Duration: 0.022
+2015-06-11 14:01:01 INFO  Block delete coverageTest/350 Duration: 0.027
+2015-06-11 14:01:01 INFO  Block delete coverageTest/360 Duration: 0.023
+2015-06-11 14:01:01 INFO  Block delete coverageTest/370 Duration: 0.027
+2015-06-11 14:01:01 INFO  Block delete coverageTest/380 Duration: 0.024
+2015-06-11 14:01:01 INFO  Block delete coverageTest/390 Duration: 0.027
+2015-06-11 14:01:01 INFO  Block delete coverageTest/400 Duration: 0.023
+2015-06-11 14:01:01 INFO  Block delete coverageTest/410 Duration: 0.028
+2015-06-11 14:01:01 INFO  Block delete coverageTest/420 Duration: 0.023
+2015-06-11 14:01:01 INFO  Block delete coverageTest/430 Duration: 0.03
+2015-06-11 14:01:01 INFO  Block delete coverageTest/440 Duration: 0.023
+2015-06-11 14:01:01 INFO  Block delete coverageTest/450 Duration: 0.027
+2015-06-11 14:01:01 INFO  Block delete coverageTest/460 Duration: 0.037
+2015-06-11 14:01:02 INFO  Block delete coverageTest/470 Duration: 0.024
+2015-06-11 14:01:02 INFO  Block delete coverageTest/480 Duration: 0.023
+2015-06-11 14:01:02 INFO  Block delete coverageTest/490 Duration: 0.026
+2015-06-11 14:01:02 INFO  Block delete coverageTest/500 Duration: 0.026
+2015-06-11 14:01:02 INFO Adding blocks. Start: 5000 End: 6001 Int: 10 Pay: /media/USB1/mine/git/public/riak/data/testBlock.dat
+2015-06-11 14:01:02 INFO  Block delete coverageTest/5000 Duration: 0.023
+2015-06-11 14:01:02 INFO  Block delete coverageTest/5010 Duration: 0.027
+2015-06-11 14:01:02 INFO  Block delete coverageTest/5020 Duration: 0.023
+2015-06-11 14:01:02 INFO  Block delete coverageTest/5030 Duration: 0.026
+2015-06-11 14:01:02 INFO  Block delete coverageTest/5040 Duration: 0.038
+2015-06-11 14:01:02 INFO  Block delete coverageTest/5050 Duration: 0.024
+2015-06-11 14:01:02 INFO  Block delete coverageTest/5060 Duration: 0.034
+2015-06-11 14:01:02 INFO  Block delete coverageTest/5070 Duration: 0.024
+2015-06-11 14:01:02 INFO  Block delete coverageTest/5080 Duration: 0.022
+2015-06-11 14:01:02 INFO  Block delete coverageTest/5090 Duration: 0.027
+2015-06-11 14:01:02 INFO  Block delete coverageTest/5100 Duration: 0.022
+2015-06-11 14:01:02 INFO  Block delete coverageTest/5110 Duration: 0.027
+2015-06-11 14:01:02 INFO  Block delete coverageTest/5120 Duration: 0.028
+2015-06-11 14:01:02 INFO  Block delete coverageTest/5130 Duration: 0.028
+2015-06-11 14:01:02 INFO  Block delete coverageTest/5140 Duration: 0.022
+2015-06-11 14:01:03 INFO  Block delete coverageTest/5150 Duration: 0.023
+2015-06-11 14:01:03 INFO  Block delete coverageTest/5160 Duration: 0.023
+2015-06-11 14:01:03 INFO  Block delete coverageTest/5170 Duration: 0.027
+2015-06-11 14:01:03 INFO  Block delete coverageTest/5180 Duration: 0.028
+2015-06-11 14:01:03 INFO  Block delete coverageTest/5190 Duration: 0.022
+2015-06-11 14:01:03 INFO  Block delete coverageTest/5200 Duration: 0.023
+2015-06-11 14:01:03 INFO  Block delete coverageTest/5210 Duration: 0.028
+2015-06-11 14:01:03 INFO  Block delete coverageTest/5220 Duration: 0.026
+2015-06-11 14:01:03 INFO  Block delete coverageTest/5230 Duration: 0.028
+2015-06-11 14:01:03 INFO  Block delete coverageTest/5240 Duration: 0.022
+2015-06-11 14:01:03 INFO  Block delete coverageTest/5250 Duration: 0.024
+2015-06-11 14:01:03 INFO  Block delete coverageTest/5260 Duration: 0.03
+2015-06-11 14:01:03 INFO  Block delete coverageTest/5270 Duration: 0.025
+2015-06-11 14:01:03 INFO  Block delete coverageTest/5280 Duration: 0.029
+2015-06-11 14:01:03 INFO  Block delete coverageTest/5290 Duration: 0.037
+2015-06-11 14:01:03 INFO  Block delete coverageTest/5300 Duration: 0.025
+2015-06-11 14:01:03 INFO  Block delete coverageTest/5310 Duration: 0.025
+2015-06-11 14:01:04 INFO  Block delete coverageTest/5320 Duration: 0.031
+2015-06-11 14:01:04 INFO  Block delete coverageTest/5330 Duration: 0.025
+2015-06-11 14:01:04 INFO  Block delete coverageTest/5340 Duration: 0.025
+2015-06-11 14:01:04 INFO  Block delete coverageTest/5350 Duration: 0.028
+2015-06-11 14:01:04 INFO  Block delete coverageTest/5360 Duration: 0.026
+2015-06-11 14:01:04 INFO  Block delete coverageTest/5370 Duration: 0.025
+2015-06-11 14:01:04 INFO  Block delete coverageTest/5380 Duration: 0.027
+2015-06-11 14:01:04 INFO  Block delete coverageTest/5390 Duration: 0.027
+2015-06-11 14:01:04 INFO  Block delete coverageTest/5400 Duration: 0.024
+2015-06-11 14:01:04 INFO  Block delete coverageTest/5410 Duration: 0.022
+2015-06-11 14:01:04 INFO  Block delete coverageTest/5420 Duration: 0.024
+2015-06-11 14:01:04 INFO  Block delete coverageTest/5430 Duration: 0.024
+2015-06-11 14:01:04 INFO  Block delete coverageTest/5440 Duration: 0.028
+2015-06-11 14:01:04 INFO  Block delete coverageTest/5450 Duration: 0.023
+2015-06-11 14:01:04 INFO  Block delete coverageTest/5460 Duration: 0.024
+2015-06-11 14:01:04 INFO  Block delete coverageTest/5470 Duration: 0.028
+2015-06-11 14:01:04 INFO  Block delete coverageTest/5480 Duration: 0.023
+2015-06-11 14:01:04 INFO  Block delete coverageTest/5490 Duration: 0.028
+2015-06-11 14:01:04 INFO  Block delete coverageTest/5500 Duration: 0.027
+2015-06-11 14:01:05 INFO  Block delete coverageTest/5510 Duration: 0.023
+2015-06-11 14:01:05 INFO  Block delete coverageTest/5520 Duration: 0.027
+2015-06-11 14:01:05 INFO  Block delete coverageTest/5530 Duration: 0.022
+2015-06-11 14:01:05 INFO  Block delete coverageTest/5540 Duration: 0.027
+2015-06-11 14:01:05 INFO  Block delete coverageTest/5550 Duration: 0.023
+2015-06-11 14:01:05 INFO  Block delete coverageTest/5560 Duration: 0.023
+2015-06-11 14:01:05 INFO  Block delete coverageTest/5570 Duration: 0.03
+2015-06-11 14:01:05 INFO  Block delete coverageTest/5580 Duration: 0.024
+2015-06-11 14:01:05 INFO  Block delete coverageTest/5590 Duration: 0.028
+2015-06-11 14:01:05 INFO  Block delete coverageTest/5600 Duration: 0.028
+2015-06-11 14:01:05 INFO  Block delete coverageTest/5610 Duration: 0.031
+2015-06-11 14:01:05 INFO  Block delete coverageTest/5620 Duration: 0.035
+2015-06-11 14:01:05 INFO  Block delete coverageTest/5630 Duration: 0.024
+2015-06-11 14:01:05 INFO  Block delete coverageTest/5640 Duration: 0.028
+2015-06-11 14:01:05 INFO  Block delete coverageTest/5650 Duration: 0.028
+2015-06-11 14:01:05 INFO  Block delete coverageTest/5660 Duration: 0.023
+2015-06-11 14:01:05 INFO  Block delete coverageTest/5670 Duration: 0.044
+2015-06-11 14:01:06 INFO  Block delete coverageTest/5680 Duration: 0.047
+2015-06-11 14:01:06 INFO  Block delete coverageTest/5690 Duration: 0.022
+2015-06-11 14:01:06 INFO  Block delete coverageTest/5700 Duration: 0.026
+2015-06-11 14:01:06 INFO  Block delete coverageTest/5710 Duration: 0.027
+2015-06-11 14:01:06 INFO  Block delete coverageTest/5720 Duration: 0.044
+2015-06-11 14:01:06 INFO  Block delete coverageTest/5730 Duration: 0.028
+2015-06-11 14:01:06 INFO  Block delete coverageTest/5740 Duration: 0.024
+2015-06-11 14:01:06 INFO  Block delete coverageTest/5750 Duration: 0.029
+2015-06-11 14:01:06 INFO  Block delete coverageTest/5760 Duration: 0.023
+2015-06-11 14:01:06 INFO  Block delete coverageTest/5770 Duration: 0.03
+2015-06-11 14:01:06 INFO  Block delete coverageTest/5780 Duration: 0.025
+2015-06-11 14:01:06 INFO  Block delete coverageTest/5790 Duration: 0.024
+2015-06-11 14:01:06 INFO  Block delete coverageTest/5800 Duration: 0.03
+2015-06-11 14:01:06 INFO  Block delete coverageTest/5810 Duration: 0.022
+2015-06-11 14:01:06 INFO  Block delete coverageTest/5820 Duration: 0.027
+2015-06-11 14:01:06 INFO  Block delete coverageTest/5830 Duration: 0.027
+2015-06-11 14:01:06 INFO  Block delete coverageTest/5840 Duration: 0.025
+2015-06-11 14:01:06 INFO  Block delete coverageTest/5850 Duration: 0.025
+2015-06-11 14:01:07 INFO  Block delete coverageTest/5860 Duration: 0.028
+2015-06-11 14:01:07 INFO  Block delete coverageTest/5870 Duration: 0.029
+2015-06-11 14:01:07 INFO  Block delete coverageTest/5880 Duration: 0.024
+2015-06-11 14:01:07 INFO  Block delete coverageTest/5890 Duration: 0.024
+2015-06-11 14:01:07 INFO  Block delete coverageTest/5900 Duration: 0.025
+2015-06-11 14:01:07 INFO  Block delete coverageTest/5910 Duration: 0.024
+2015-06-11 14:01:07 INFO  Block delete coverageTest/5920 Duration: 0.024
+2015-06-11 14:01:07 INFO  Block delete coverageTest/5930 Duration: 0.029
+2015-06-11 14:01:07 INFO  Block delete coverageTest/5940 Duration: 0.027
+2015-06-11 14:01:07 INFO  Block delete coverageTest/5950 Duration: 0.025
+2015-06-11 14:01:07 INFO  Block delete coverageTest/5960 Duration: 0.03
+2015-06-11 14:01:07 INFO  Block delete coverageTest/5970 Duration: 0.025
+2015-06-11 14:01:07 INFO  Block delete coverageTest/5980 Duration: 0.028
+2015-06-11 14:01:07 INFO  Block delete coverageTest/5990 Duration: 0.028
+2015-06-11 14:01:07 INFO  Block delete coverageTest/6000 Duration: 0.023
+2015-06-11 14:01:07 INFO Adding blocks. Start: 8000 End: 8501 Int: 10 Pay: /media/USB1/mine/git/public/riak/data/testBlock.dat
+2015-06-11 14:01:07 INFO  Block delete coverageTest/8000 Duration: 0.023
+2015-06-11 14:01:07 INFO  Block delete coverageTest/8010 Duration: 0.024
+2015-06-11 14:01:07 INFO  Block delete coverageTest/8020 Duration: 0.023
+2015-06-11 14:01:07 INFO  Block delete coverageTest/8030 Duration: 0.05
+2015-06-11 14:01:08 INFO  Block delete coverageTest/8040 Duration: 0.027
+2015-06-11 14:01:08 INFO  Block delete coverageTest/8050 Duration: 0.023
+2015-06-11 14:01:08 INFO  Block delete coverageTest/8060 Duration: 0.033
+2015-06-11 14:01:08 INFO  Block delete coverageTest/8070 Duration: 0.033
+2015-06-11 14:01:08 INFO  Block delete coverageTest/8080 Duration: 0.028
+2015-06-11 14:01:08 INFO  Block delete coverageTest/8090 Duration: 0.023
+2015-06-11 14:01:08 INFO  Block delete coverageTest/8100 Duration: 0.026
+2015-06-11 14:01:08 INFO  Block delete coverageTest/8110 Duration: 0.027
+2015-06-11 14:01:08 INFO  Block delete coverageTest/8120 Duration: 0.027
+2015-06-11 14:01:08 INFO  Block delete coverageTest/8130 Duration: 0.022
+2015-06-11 14:01:08 INFO  Block delete coverageTest/8140 Duration: 0.023
+2015-06-11 14:01:08 INFO  Block delete coverageTest/8150 Duration: 0.023
+2015-06-11 14:01:08 INFO  Block delete coverageTest/8160 Duration: 0.023
+2015-06-11 14:01:08 INFO  Block delete coverageTest/8170 Duration: 0.024
+2015-06-11 14:01:08 INFO  Block delete coverageTest/8180 Duration: 0.028
+2015-06-11 14:01:08 INFO  Block delete coverageTest/8190 Duration: 0.034
+2015-06-11 14:01:08 INFO  Block delete coverageTest/8200 Duration: 0.024
+2015-06-11 14:01:08 INFO  Block delete coverageTest/8210 Duration: 0.029
+2015-06-11 14:01:09 INFO  Block delete coverageTest/8220 Duration: 0.029
+2015-06-11 14:01:09 INFO  Block delete coverageTest/8230 Duration: 0.029
+2015-06-11 14:01:09 INFO  Block delete coverageTest/8240 Duration: 0.033
+2015-06-11 14:01:09 INFO  Block delete coverageTest/8250 Duration: 0.039
+2015-06-11 14:01:09 INFO  Block delete coverageTest/8260 Duration: 0.022
+2015-06-11 14:01:09 INFO  Block delete coverageTest/8270 Duration: 0.027
+2015-06-11 14:01:09 INFO  Block delete coverageTest/8280 Duration: 0.027
+2015-06-11 14:01:09 INFO  Block delete coverageTest/8290 Duration: 0.027
+2015-06-11 14:01:09 INFO  Block delete coverageTest/8300 Duration: 0.031
+2015-06-11 14:01:09 INFO  Block delete coverageTest/8310 Duration: 0.024
+2015-06-11 14:01:09 INFO  Block delete coverageTest/8320 Duration: 0.027
+2015-06-11 14:01:09 INFO  Block delete coverageTest/8330 Duration: 0.024
+2015-06-11 14:01:09 INFO  Block delete coverageTest/8340 Duration: 0.025
+2015-06-11 14:01:09 INFO  Block delete coverageTest/8350 Duration: 0.025
+2015-06-11 14:01:09 INFO  Block delete coverageTest/8360 Duration: 0.029
+2015-06-11 14:01:09 INFO  Block delete coverageTest/8370 Duration: 0.024
+2015-06-11 14:01:09 INFO  Block delete coverageTest/8380 Duration: 0.029
+2015-06-11 14:01:09 INFO  Block delete coverageTest/8390 Duration: 0.037
+2015-06-11 14:01:10 INFO  Block delete coverageTest/8400 Duration: 0.022
+2015-06-11 14:01:10 INFO  Block delete coverageTest/8410 Duration: 0.023
+2015-06-11 14:01:10 INFO  Block delete coverageTest/8420 Duration: 0.031
+2015-06-11 14:01:10 INFO  Block delete coverageTest/8430 Duration: 0.029
+2015-06-11 14:01:10 INFO  Block delete coverageTest/8440 Duration: 0.024
+2015-06-11 14:01:10 INFO  Block delete coverageTest/8450 Duration: 0.028
+2015-06-11 14:01:10 INFO  Block delete coverageTest/8460 Duration: 0.024
+2015-06-11 14:01:10 INFO  Block delete coverageTest/8470 Duration: 0.023
+2015-06-11 14:01:10 INFO  Block delete coverageTest/8480 Duration: 0.027
+2015-06-11 14:01:10 INFO  Block delete coverageTest/8490 Duration: 0.024
+2015-06-11 14:01:10 INFO  Block delete coverageTest/8500 Duration: 0.027
+2015-06-11 14:01:19 INFO Starting Run: 20150611  ==============================
+2015-06-11 14:01:19 INFO Adding blocks. Start: 0 End: 501 Int: 10 Pay: /media/USB1/mine/git/public/riak/data/testBlock.dat
+2015-06-11 14:01:20 INFO  Block write coverageTest/0 Sz: 127368 Dur: 0.785
+2015-06-11 14:01:21 INFO  Block write coverageTest/10 Sz: 127368 Dur: 0.858
+2015-06-11 14:01:22 INFO  Block write coverageTest/20 Sz: 127368 Dur: 0.892
+2015-06-11 14:01:23 INFO  Block write coverageTest/30 Sz: 127368 Dur: 0.88
+2015-06-11 14:01:23 INFO  Block write coverageTest/40 Sz: 127368 Dur: 0.889
+2015-06-11 14:01:24 INFO  Block write coverageTest/50 Sz: 127368 Dur: 0.924
+2015-06-11 14:01:25 INFO  Block write coverageTest/60 Sz: 127368 Dur: 0.858
+2015-06-11 14:01:26 INFO  Block write coverageTest/70 Sz: 127368 Dur: 0.872
+2015-06-11 14:01:27 INFO  Block write coverageTest/80 Sz: 127368 Dur: 0.882
+2015-06-11 14:01:28 INFO  Block write coverageTest/90 Sz: 127368 Dur: 0.923
+2015-06-11 14:01:29 INFO  Block write coverageTest/100 Sz: 127368 Dur: 0.86
+2015-06-11 14:01:30 INFO  Block write coverageTest/110 Sz: 127368 Dur: 1.039
+2015-06-11 14:01:31 INFO  Block write coverageTest/120 Sz: 127368 Dur: 0.852
+2015-06-11 14:01:32 INFO  Block write coverageTest/130 Sz: 127368 Dur: 0.84
+2015-06-11 14:01:32 INFO  Block write coverageTest/140 Sz: 127368 Dur: 0.863
+2015-06-11 14:01:33 INFO  Block write coverageTest/150 Sz: 127368 Dur: 0.959
+2015-06-11 14:01:34 INFO  Block write coverageTest/160 Sz: 127368 Dur: 0.801
+2015-06-11 14:01:35 INFO  Block write coverageTest/170 Sz: 127368 Dur: 0.89
+2015-06-11 14:01:36 INFO  Block write coverageTest/180 Sz: 127368 Dur: 0.898
+2015-06-11 14:01:37 INFO  Block write coverageTest/190 Sz: 127368 Dur: 0.837
+2015-06-11 14:01:38 INFO  Block write coverageTest/200 Sz: 127368 Dur: 0.874
+2015-06-11 14:01:39 INFO  Block write coverageTest/210 Sz: 127368 Dur: 0.888
+2015-06-11 14:01:39 INFO  Block write coverageTest/220 Sz: 127368 Dur: 0.925
+2015-06-11 14:01:40 INFO  Block write coverageTest/230 Sz: 127368 Dur: 0.863
+2015-06-11 14:01:41 INFO  Block write coverageTest/240 Sz: 127368 Dur: 0.863
+2015-06-11 14:01:42 INFO  Block write coverageTest/250 Sz: 127368 Dur: 0.893
+2015-06-11 14:01:43 INFO  Block write coverageTest/260 Sz: 127368 Dur: 0.889
+2015-06-11 14:01:44 INFO  Block write coverageTest/270 Sz: 127368 Dur: 0.886
+2015-06-11 14:01:45 INFO  Block write coverageTest/280 Sz: 127368 Dur: 0.889
+2015-06-11 14:01:46 INFO  Block write coverageTest/290 Sz: 127368 Dur: 0.885
+2015-06-11 14:01:46 INFO  Block write coverageTest/300 Sz: 127368 Dur: 0.884
+2015-06-11 14:01:47 INFO  Block write coverageTest/310 Sz: 127368 Dur: 0.886
+2015-06-11 14:01:48 INFO  Block write coverageTest/320 Sz: 127368 Dur: 0.888
+2015-06-11 14:01:49 INFO  Block write coverageTest/330 Sz: 127368 Dur: 0.898
+2015-06-11 14:01:50 INFO  Block write coverageTest/340 Sz: 127368 Dur: 0.873
+2015-06-11 14:01:51 INFO  Block write coverageTest/350 Sz: 127368 Dur: 0.927
+2015-06-11 14:01:52 INFO  Block write coverageTest/360 Sz: 127368 Dur: 0.856
+2015-06-11 14:01:53 INFO  Block write coverageTest/370 Sz: 127368 Dur: 0.892
+2015-06-11 14:01:54 INFO  Block write coverageTest/380 Sz: 127368 Dur: 0.879
+2015-06-11 14:01:54 INFO  Block write coverageTest/390 Sz: 127368 Dur: 0.888
+2015-06-11 14:01:55 INFO  Block write coverageTest/400 Sz: 127368 Dur: 0.919
+2015-06-11 14:01:56 INFO  Block write coverageTest/410 Sz: 127368 Dur: 0.856
+2015-06-11 14:01:57 INFO  Block write coverageTest/420 Sz: 127368 Dur: 0.879
+2015-06-11 14:01:58 INFO  Block write coverageTest/430 Sz: 127368 Dur: 0.885
+2015-06-11 14:01:59 INFO  Block write coverageTest/440 Sz: 127368 Dur: 0.883
+2015-06-11 14:02:00 INFO  Block write coverageTest/450 Sz: 127368 Dur: 0.881
+2015-06-11 14:02:01 INFO  Block write coverageTest/460 Sz: 127368 Dur: 0.903
+2015-06-11 14:02:02 INFO  Block write coverageTest/470 Sz: 127368 Dur: 0.881
+2015-06-11 14:02:02 INFO  Block write coverageTest/480 Sz: 127368 Dur: 0.896
+2015-06-11 14:02:03 INFO  Block write coverageTest/490 Sz: 127368 Dur: 0.897
+2015-06-11 14:02:04 INFO  Block write coverageTest/500 Sz: 127368 Dur: 0.868
+2015-06-11 14:02:04 INFO Adding blocks. Start: 5000 End: 6001 Int: 10 Pay: /media/USB1/mine/git/public/riak/data/testBlock.dat
+2015-06-11 14:02:05 INFO  Block write coverageTest/5000 Sz: 127368 Dur: 0.891
+2015-06-11 14:02:06 INFO  Block write coverageTest/5010 Sz: 127368 Dur: 0.876
+2015-06-11 14:02:07 INFO  Block write coverageTest/5020 Sz: 127368 Dur: 0.893
+2015-06-11 14:02:08 INFO  Block write coverageTest/5030 Sz: 127368 Dur: 0.917
+2015-06-11 14:02:09 INFO  Block write coverageTest/5040 Sz: 127368 Dur: 0.86
+2015-06-11 14:02:10 INFO  Block write coverageTest/5050 Sz: 127368 Dur: 0.888
+2015-06-11 14:02:10 INFO  Block write coverageTest/5060 Sz: 127368 Dur: 0.903
+2015-06-11 14:02:11 INFO  Block write coverageTest/5070 Sz: 127368 Dur: 0.913
+2015-06-11 14:02:12 INFO  Block write coverageTest/5080 Sz: 127368 Dur: 0.93
+2015-06-11 14:02:13 INFO  Block write coverageTest/5090 Sz: 127368 Dur: 0.845
+2015-06-11 14:02:14 INFO  Block write coverageTest/5100 Sz: 127368 Dur: 0.891
+2015-06-11 14:02:15 INFO  Block write coverageTest/5110 Sz: 127368 Dur: 0.886
+2015-06-11 14:02:16 INFO  Block write coverageTest/5120 Sz: 127368 Dur: 0.875
+2015-06-11 14:02:17 INFO  Block write coverageTest/5130 Sz: 127368 Dur: 0.926
+2015-06-11 14:02:18 INFO  Block write coverageTest/5140 Sz: 127368 Dur: 1.012
+2015-06-11 14:02:19 INFO  Block write coverageTest/5150 Sz: 127368 Dur: 0.845
+2015-06-11 14:02:19 INFO  Block write coverageTest/5160 Sz: 127368 Dur: 0.843
+2015-06-11 14:02:20 INFO  Block write coverageTest/5170 Sz: 127368 Dur: 0.868
+2015-06-11 14:02:21 INFO  Block write coverageTest/5180 Sz: 127368 Dur: 0.897
+2015-06-11 14:02:22 INFO  Block write coverageTest/5190 Sz: 127368 Dur: 0.866
+2015-06-11 14:02:23 INFO  Block write coverageTest/5200 Sz: 127368 Dur: 0.865
+2015-06-11 14:02:24 INFO  Block write coverageTest/5210 Sz: 127368 Dur: 0.876
+2015-06-11 14:02:25 INFO  Block write coverageTest/5220 Sz: 127368 Dur: 0.874
+2015-06-11 14:02:26 INFO  Block write coverageTest/5230 Sz: 127368 Dur: 0.895
+2015-06-11 14:02:26 INFO  Block write coverageTest/5240 Sz: 127368 Dur: 0.871
+2015-06-11 14:02:27 INFO  Block write coverageTest/5250 Sz: 127368 Dur: 0.92
+2015-06-11 14:02:28 INFO  Block write coverageTest/5260 Sz: 127368 Dur: 0.867
+2015-06-11 14:02:29 INFO  Block write coverageTest/5270 Sz: 127368 Dur: 0.885
+2015-06-11 14:02:30 INFO  Block write coverageTest/5280 Sz: 127368 Dur: 0.88
+2015-06-11 14:02:31 INFO  Block write coverageTest/5290 Sz: 127368 Dur: 0.886
+2015-06-11 14:02:32 INFO  Block write coverageTest/5300 Sz: 127368 Dur: 0.884
+2015-06-11 14:02:33 INFO  Block write coverageTest/5310 Sz: 127368 Dur: 0.893
+2015-06-11 14:02:34 INFO  Block write coverageTest/5320 Sz: 127368 Dur: 0.888
+2015-06-11 14:02:34 INFO  Block write coverageTest/5330 Sz: 127368 Dur: 0.891
+2015-06-11 14:02:35 INFO  Block write coverageTest/5340 Sz: 127368 Dur: 0.926
+2015-06-11 14:02:36 INFO  Block write coverageTest/5350 Sz: 127368 Dur: 0.849
+2015-06-11 14:02:37 INFO  Block write coverageTest/5360 Sz: 127368 Dur: 0.891
+2015-06-11 14:02:38 INFO  Block write coverageTest/5370 Sz: 127368 Dur: 0.878
+2015-06-11 14:02:39 INFO  Block write coverageTest/5380 Sz: 127368 Dur: 0.884
+2015-06-11 14:02:40 INFO  Block write coverageTest/5390 Sz: 127368 Dur: 0.905
+2015-06-11 14:02:41 INFO  Block write coverageTest/5400 Sz: 127368 Dur: 0.856
+2015-06-11 14:02:42 INFO  Block write coverageTest/5410 Sz: 127368 Dur: 0.89
+2015-06-11 14:02:42 INFO  Block write coverageTest/5420 Sz: 127368 Dur: 0.889
+2015-06-11 14:02:43 INFO  Block write coverageTest/5430 Sz: 127368 Dur: 0.885
+2015-06-11 14:02:44 INFO  Block write coverageTest/5440 Sz: 127368 Dur: 0.885
+2015-06-11 14:02:45 INFO  Block write coverageTest/5450 Sz: 127368 Dur: 0.885
+2015-06-11 14:02:46 INFO  Block write coverageTest/5460 Sz: 127368 Dur: 0.884
+2015-06-11 14:02:47 INFO  Block write coverageTest/5470 Sz: 127368 Dur: 0.89
+2015-06-11 14:02:48 INFO  Block write coverageTest/5480 Sz: 127368 Dur: 0.879
+2015-06-11 14:02:49 INFO  Block write coverageTest/5490 Sz: 127368 Dur: 0.887
+2015-06-11 14:02:50 INFO  Block write coverageTest/5500 Sz: 127368 Dur: 0.884
+2015-06-11 14:02:50 INFO  Block write coverageTest/5510 Sz: 127368 Dur: 0.929
+2015-06-11 14:02:51 INFO  Block write coverageTest/5520 Sz: 127368 Dur: 0.848
+2015-06-11 14:02:52 INFO  Block write coverageTest/5530 Sz: 127368 Dur: 0.899
+2015-06-11 14:02:53 INFO  Block write coverageTest/5540 Sz: 127368 Dur: 0.87
+2015-06-11 14:02:54 INFO  Block write coverageTest/5550 Sz: 127368 Dur: 0.898
+2015-06-11 14:02:55 INFO  Block write coverageTest/5560 Sz: 127368 Dur: 0.89
+2015-06-11 14:02:56 INFO  Block write coverageTest/5570 Sz: 127368 Dur: 0.9
+2015-06-11 14:02:57 INFO  Block write coverageTest/5580 Sz: 127368 Dur: 0.875
+2015-06-11 14:02:58 INFO  Block write coverageTest/5590 Sz: 127368 Dur: 0.89
+2015-06-11 14:02:58 INFO  Block write coverageTest/5600 Sz: 127368 Dur: 0.9
+2015-06-11 14:02:59 INFO  Block write coverageTest/5610 Sz: 127368 Dur: 0.882
+2015-06-11 14:03:00 INFO  Block write coverageTest/5620 Sz: 127368 Dur: 0.9
+2015-06-11 14:03:01 INFO  Block write coverageTest/5630 Sz: 127368 Dur: 0.863
+2015-06-11 14:03:02 INFO  Block write coverageTest/5640 Sz: 127368 Dur: 0.885
+2015-06-11 14:03:03 INFO  Block write coverageTest/5650 Sz: 127368 Dur: 0.888
+2015-06-11 14:03:04 INFO  Block write coverageTest/5660 Sz: 127368 Dur: 0.888
+2015-06-11 14:03:05 INFO  Block write coverageTest/5670 Sz: 127368 Dur: 0.879
+2015-06-11 14:03:05 INFO  Block write coverageTest/5680 Sz: 127368 Dur: 0.891
+2015-06-11 14:03:06 INFO  Block write coverageTest/5690 Sz: 127368 Dur: 0.885
+2015-06-11 14:03:07 INFO  Block write coverageTest/5700 Sz: 127368 Dur: 0.92
+2015-06-11 14:03:08 INFO  Block write coverageTest/5710 Sz: 127368 Dur: 0.853
+2015-06-11 14:03:09 INFO  Block write coverageTest/5720 Sz: 127368 Dur: 0.892
+2015-06-11 14:03:10 INFO  Block write coverageTest/5730 Sz: 127368 Dur: 0.883
+2015-06-11 14:03:11 INFO  Block write coverageTest/5740 Sz: 127368 Dur: 0.876
+2015-06-11 14:03:12 INFO  Block write coverageTest/5750 Sz: 127368 Dur: 0.899
+2015-06-11 14:03:13 INFO  Block write coverageTest/5760 Sz: 127368 Dur: 0.874
+2015-06-11 14:03:13 INFO  Block write coverageTest/5770 Sz: 127368 Dur: 0.892
+2015-06-11 14:03:14 INFO  Block write coverageTest/5780 Sz: 127368 Dur: 0.91
+2015-06-11 14:03:15 INFO  Block write coverageTest/5790 Sz: 127368 Dur: 0.846
+2015-06-11 14:03:16 INFO  Block write coverageTest/5800 Sz: 127368 Dur: 0.902
+2015-06-11 14:03:17 INFO  Block write coverageTest/5810 Sz: 127368 Dur: 0.883
+2015-06-11 14:03:18 INFO  Block write coverageTest/5820 Sz: 127368 Dur: 0.878
+2015-06-11 14:03:19 INFO  Block write coverageTest/5830 Sz: 127368 Dur: 0.928
+2015-06-11 14:03:20 INFO  Block write coverageTest/5840 Sz: 127368 Dur: 0.875
+2015-06-11 14:03:21 INFO  Block write coverageTest/5850 Sz: 127368 Dur: 0.872
+2015-06-11 14:03:22 INFO  Block write coverageTest/5860 Sz: 127368 Dur: 1.0
+2015-06-11 14:03:22 INFO  Block write coverageTest/5870 Sz: 127368 Dur: 0.853
+2015-06-11 14:03:23 INFO  Block write coverageTest/5880 Sz: 127368 Dur: 0.844
+2015-06-11 14:03:24 INFO  Block write coverageTest/5890 Sz: 127368 Dur: 0.868
+2015-06-11 14:03:25 INFO  Block write coverageTest/5900 Sz: 127368 Dur: 0.873
+2015-06-11 14:03:26 INFO  Block write coverageTest/5910 Sz: 127368 Dur: 0.904
+2015-06-11 14:03:27 INFO  Block write coverageTest/5920 Sz: 127368 Dur: 0.874
+2015-06-11 14:03:28 INFO  Block write coverageTest/5930 Sz: 127368 Dur: 0.912
+2015-06-11 14:03:29 INFO  Block write coverageTest/5940 Sz: 127368 Dur: 0.859
+2015-06-11 14:03:29 INFO  Block write coverageTest/5950 Sz: 127368 Dur: 0.889
+2015-06-11 14:03:30 INFO  Block write coverageTest/5960 Sz: 127368 Dur: 0.9
+2015-06-11 14:03:31 INFO  Block write coverageTest/5970 Sz: 127368 Dur: 0.877
+2015-06-11 14:03:32 INFO  Block write coverageTest/5980 Sz: 127368 Dur: 0.88
+2015-06-11 14:03:33 INFO  Block write coverageTest/5990 Sz: 127368 Dur: 0.9
+2015-06-11 14:03:34 INFO  Block write coverageTest/6000 Sz: 127368 Dur: 0.883
+2015-06-11 14:03:34 INFO Adding blocks. Start: 8000 End: 8501 Int: 10 Pay: /media/USB1/mine/git/public/riak/data/testBlock.dat
+2015-06-11 14:03:35 INFO  Block write coverageTest/8000 Sz: 127368 Dur: 0.885
+2015-06-11 14:03:36 INFO  Block write coverageTest/8010 Sz: 127368 Dur: 0.878
+2015-06-11 14:03:37 INFO  Block write coverageTest/8020 Sz: 127368 Dur: 0.878
+2015-06-11 14:03:37 INFO  Block write coverageTest/8030 Sz: 127368 Dur: 0.888
+2015-06-11 14:03:38 INFO  Block write coverageTest/8040 Sz: 127368 Dur: 0.888
+2015-06-11 14:03:39 INFO  Block write coverageTest/8050 Sz: 127368 Dur: 0.893
+2015-06-11 14:03:40 INFO  Block write coverageTest/8060 Sz: 127368 Dur: 0.902
+2015-06-11 14:03:41 INFO  Block write coverageTest/8070 Sz: 127368 Dur: 0.875
+2015-06-11 14:03:42 INFO  Block write coverageTest/8080 Sz: 127368 Dur: 0.886
+2015-06-11 14:03:43 INFO  Block write coverageTest/8090 Sz: 127368 Dur: 0.899
+2015-06-11 14:03:44 INFO  Block write coverageTest/8100 Sz: 127368 Dur: 0.874
+2015-06-11 14:03:45 INFO  Block write coverageTest/8110 Sz: 127368 Dur: 0.946
+2015-06-11 14:03:45 INFO  Block write coverageTest/8120 Sz: 127368 Dur: 0.858
+2015-06-11 14:03:46 INFO  Block write coverageTest/8130 Sz: 127368 Dur: 0.845
+2015-06-11 14:03:47 INFO  Block write coverageTest/8140 Sz: 127368 Dur: 0.897
+2015-06-11 14:03:48 INFO  Block write coverageTest/8150 Sz: 127368 Dur: 0.866
+2015-06-11 14:03:49 INFO  Block write coverageTest/8160 Sz: 127368 Dur: 0.895
+2015-06-11 14:03:50 INFO  Block write coverageTest/8170 Sz: 127368 Dur: 0.914
+2015-06-11 14:03:51 INFO  Block write coverageTest/8180 Sz: 127368 Dur: 0.871
+2015-06-11 14:03:52 INFO  Block write coverageTest/8190 Sz: 127368 Dur: 0.882
+2015-06-11 14:03:52 INFO  Block write coverageTest/8200 Sz: 127368 Dur: 0.893
+2015-06-11 14:03:53 INFO  Block write coverageTest/8210 Sz: 127368 Dur: 0.865
+2015-06-11 14:03:54 INFO  Block write coverageTest/8220 Sz: 127368 Dur: 0.907
+2015-06-11 14:03:55 INFO  Block write coverageTest/8230 Sz: 127368 Dur: 0.89
+2015-06-11 14:03:56 INFO  Block write coverageTest/8240 Sz: 127368 Dur: 0.86
+2015-06-11 14:03:57 INFO  Block write coverageTest/8250 Sz: 127368 Dur: 0.893
+2015-06-11 14:03:58 INFO  Block write coverageTest/8260 Sz: 127368 Dur: 0.885
+2015-06-11 14:03:59 INFO  Block write coverageTest/8270 Sz: 127368 Dur: 0.899
+2015-06-11 14:04:00 INFO  Block write coverageTest/8280 Sz: 127368 Dur: 0.911
+2015-06-11 14:04:00 INFO  Block write coverageTest/8290 Sz: 127368 Dur: 0.858
+2015-06-11 14:04:01 INFO  Block write coverageTest/8300 Sz: 127368 Dur: 0.89
+2015-06-11 14:04:02 INFO  Block write coverageTest/8310 Sz: 127368 Dur: 0.882
+2015-06-11 14:04:03 INFO  Block write coverageTest/8320 Sz: 127368 Dur: 0.886
+2015-06-11 14:04:04 INFO  Block write coverageTest/8330 Sz: 127368 Dur: 0.881
+2015-06-11 14:04:05 INFO  Block write coverageTest/8340 Sz: 127368 Dur: 0.866
+2015-06-11 14:04:06 INFO  Block write coverageTest/8350 Sz: 127368 Dur: 0.909
+2015-06-11 14:04:07 INFO  Block write coverageTest/8360 Sz: 127368 Dur: 0.91
+2015-06-11 14:04:08 INFO  Block write coverageTest/8370 Sz: 127368 Dur: 0.911
+2015-06-11 14:04:08 INFO  Block write coverageTest/8380 Sz: 127368 Dur: 0.819
+2015-06-11 14:04:09 INFO  Block write coverageTest/8390 Sz: 127368 Dur: 0.897
+2015-06-11 14:04:10 INFO  Block write coverageTest/8400 Sz: 127368 Dur: 0.895
+2015-06-11 14:04:11 INFO  Block write coverageTest/8410 Sz: 127368 Dur: 0.913
+2015-06-11 14:04:12 INFO  Block write coverageTest/8420 Sz: 127368 Dur: 0.843
+2015-06-11 14:04:13 INFO  Block write coverageTest/8430 Sz: 127368 Dur: 0.89
+2015-06-11 14:04:14 INFO  Block write coverageTest/8440 Sz: 127368 Dur: 0.931
+2015-06-11 14:04:15 INFO  Block write coverageTest/8450 Sz: 127368 Dur: 0.885
+2015-06-11 14:04:16 INFO  Block write coverageTest/8460 Sz: 127368 Dur: 0.886
+2015-06-11 14:04:16 INFO  Block write coverageTest/8470 Sz: 127368 Dur: 0.874
+2015-06-11 14:04:17 INFO  Block write coverageTest/8480 Sz: 127368 Dur: 0.858
+2015-06-11 14:04:18 INFO  Block write coverageTest/8490 Sz: 127368 Dur: 0.901
+2015-06-11 14:04:19 INFO  Block write coverageTest/8500 Sz: 127368 Dur: 0.873
+2015-06-11 14:04:19 INFO Adding blocks. Start: 0 End: 501 Int: 10 Pay: /media/USB1/mine/git/public/riak/data/testBlock.dat
+2015-06-11 14:04:19 INFO  Block delete coverageTest/0 Duration: 0.027
+2015-06-11 14:04:19 INFO  Block delete coverageTest/10 Duration: 0.028
+2015-06-11 14:04:20 INFO  Block delete coverageTest/20 Duration: 0.025
+2015-06-11 14:04:20 INFO  Block delete coverageTest/30 Duration: 0.033
+2015-06-11 14:04:20 INFO  Block delete coverageTest/40 Duration: 0.029
+2015-06-11 14:04:20 INFO  Block delete coverageTest/50 Duration: 0.04
+2015-06-11 14:04:20 INFO  Block delete coverageTest/60 Duration: 0.037
+2015-06-11 14:04:20 INFO  Block delete coverageTest/70 Duration: 0.03
+2015-06-11 14:04:20 INFO  Block delete coverageTest/80 Duration: 0.024
+2015-06-11 14:04:21 INFO  Block delete coverageTest/90 Duration: 0.026
+2015-06-11 14:04:21 INFO  Block delete coverageTest/100 Duration: 0.035
+2015-06-11 14:04:21 INFO  Block delete coverageTest/110 Duration: 0.036
+2015-06-11 14:04:21 INFO  Block delete coverageTest/120 Duration: 0.027
+2015-06-11 14:04:21 INFO  Block delete coverageTest/130 Duration: 0.032
+2015-06-11 14:04:21 INFO  Block delete coverageTest/140 Duration: 0.026
+2015-06-11 14:04:21 INFO  Block delete coverageTest/150 Duration: 0.036
+2015-06-11 14:04:22 INFO  Block delete coverageTest/160 Duration: 0.025
+2015-06-11 14:04:22 INFO  Block delete coverageTest/170 Duration: 0.027
+2015-06-11 14:04:22 INFO  Block delete coverageTest/180 Duration: 0.024
+2015-06-11 14:04:22 INFO  Block delete coverageTest/190 Duration: 0.028
+2015-06-11 14:04:22 INFO  Block delete coverageTest/200 Duration: 0.026
+2015-06-11 14:04:22 INFO  Block delete coverageTest/210 Duration: 0.03
+2015-06-11 14:04:22 INFO  Block delete coverageTest/220 Duration: 0.027
+2015-06-11 14:04:23 INFO  Block delete coverageTest/230 Duration: 0.034
+2015-06-11 14:04:23 INFO  Block delete coverageTest/240 Duration: 0.031
+2015-06-11 14:04:23 INFO  Block delete coverageTest/250 Duration: 0.026
+2015-06-11 14:04:23 INFO  Block delete coverageTest/260 Duration: 0.026
+2015-06-11 14:04:23 INFO  Block delete coverageTest/270 Duration: 0.031
+2015-06-11 14:04:23 INFO  Block delete coverageTest/280 Duration: 0.032
+2015-06-11 14:04:23 INFO  Block delete coverageTest/290 Duration: 0.035
+2015-06-11 14:04:24 INFO  Block delete coverageTest/300 Duration: 0.033
+2015-06-11 14:04:24 INFO  Block delete coverageTest/310 Duration: 0.024
+2015-06-11 14:04:24 INFO  Block delete coverageTest/320 Duration: 0.025
+2015-06-11 14:04:24 INFO  Block delete coverageTest/330 Duration: 0.03
+2015-06-11 14:04:24 INFO  Block delete coverageTest/340 Duration: 0.031
+2015-06-11 14:04:24 INFO  Block delete coverageTest/350 Duration: 0.03
+2015-06-11 14:04:24 INFO  Block delete coverageTest/360 Duration: 0.023
+2015-06-11 14:04:25 INFO  Block delete coverageTest/370 Duration: 0.029
+2015-06-11 14:04:25 INFO  Block delete coverageTest/380 Duration: 0.033
+2015-06-11 14:04:25 INFO  Block delete coverageTest/390 Duration: 0.045
+2015-06-11 14:04:25 INFO  Block delete coverageTest/400 Duration: 0.028
+2015-06-11 14:04:25 INFO  Block delete coverageTest/410 Duration: 0.029
+2015-06-11 14:04:25 INFO  Block delete coverageTest/420 Duration: 0.042
+2015-06-11 14:04:25 INFO  Block delete coverageTest/430 Duration: 0.027
+2015-06-11 14:04:26 INFO  Block delete coverageTest/440 Duration: 0.031
+2015-06-11 14:04:26 INFO  Block delete coverageTest/450 Duration: 0.034
+2015-06-11 14:04:26 INFO  Block delete coverageTest/460 Duration: 0.024
+2015-06-11 14:04:26 INFO  Block delete coverageTest/470 Duration: 0.026
+2015-06-11 14:04:26 INFO  Block delete coverageTest/480 Duration: 0.03
+2015-06-11 14:04:26 INFO  Block delete coverageTest/490 Duration: 0.024
+2015-06-11 14:04:26 INFO  Block delete coverageTest/500 Duration: 0.025
+2015-06-11 14:04:26 INFO Adding blocks. Start: 5000 End: 6001 Int: 10 Pay: /media/USB1/mine/git/public/riak/data/testBlock.dat
+2015-06-11 14:04:27 INFO  Block delete coverageTest/5000 Duration: 0.033
+2015-06-11 14:04:27 INFO  Block delete coverageTest/5010 Duration: 0.025
+2015-06-11 14:04:27 INFO  Block delete coverageTest/5020 Duration: 0.025
+2015-06-11 14:04:27 INFO  Block delete coverageTest/5030 Duration: 0.032
+2015-06-11 14:04:27 INFO  Block delete coverageTest/5040 Duration: 0.028
+2015-06-11 14:04:27 INFO  Block delete coverageTest/5050 Duration: 0.034
+2015-06-11 14:04:28 INFO  Block delete coverageTest/5060 Duration: 0.025
+2015-06-11 14:04:28 INFO  Block delete coverageTest/5070 Duration: 0.03
+2015-06-11 14:04:28 INFO  Block delete coverageTest/5080 Duration: 0.026
+2015-06-11 14:04:28 INFO  Block delete coverageTest/5090 Duration: 0.03
+2015-06-11 14:04:28 INFO  Block delete coverageTest/5100 Duration: 0.028
+2015-06-11 14:04:28 INFO  Block delete coverageTest/5110 Duration: 0.027
+2015-06-11 14:04:28 INFO  Block delete coverageTest/5120 Duration: 0.024
+2015-06-11 14:04:29 INFO  Block delete coverageTest/5130 Duration: 0.027
+2015-06-11 14:04:29 INFO  Block delete coverageTest/5140 Duration: 0.025
+2015-06-11 14:04:29 INFO  Block delete coverageTest/5150 Duration: 0.025
+2015-06-11 14:04:29 INFO  Block delete coverageTest/5160 Duration: 0.062
+2015-06-11 14:04:29 INFO  Block delete coverageTest/5170 Duration: 0.032
+2015-06-11 14:04:29 INFO  Block delete coverageTest/5180 Duration: 0.027
+2015-06-11 14:04:29 INFO  Block delete coverageTest/5190 Duration: 0.025
+2015-06-11 14:04:30 INFO  Block delete coverageTest/5200 Duration: 0.025
+2015-06-11 14:04:30 INFO  Block delete coverageTest/5210 Duration: 0.026
+2015-06-11 14:04:30 INFO  Block delete coverageTest/5220 Duration: 0.033
+2015-06-11 14:04:30 INFO  Block delete coverageTest/5230 Duration: 0.026
+2015-06-11 14:04:30 INFO  Block delete coverageTest/5240 Duration: 0.028
+2015-06-11 14:04:30 INFO  Block delete coverageTest/5250 Duration: 0.028
+2015-06-11 14:04:30 INFO  Block delete coverageTest/5260 Duration: 0.028
+2015-06-11 14:04:31 INFO  Block delete coverageTest/5270 Duration: 0.026
+2015-06-11 14:04:31 INFO  Block delete coverageTest/5280 Duration: 0.025
+2015-06-11 14:04:31 INFO  Block delete coverageTest/5290 Duration: 0.038
+2015-06-11 14:04:31 INFO  Block delete coverageTest/5300 Duration: 0.028
+2015-06-11 14:04:31 INFO  Block delete coverageTest/5310 Duration: 0.028
+2015-06-11 14:04:31 INFO  Block delete coverageTest/5320 Duration: 0.025
+2015-06-11 14:04:31 INFO  Block delete coverageTest/5330 Duration: 0.029
+2015-06-11 14:04:32 INFO  Block delete coverageTest/5340 Duration: 0.028
+2015-06-11 14:04:32 INFO  Block delete coverageTest/5350 Duration: 0.029
+2015-06-11 14:04:32 INFO  Block delete coverageTest/5360 Duration: 0.028
+2015-06-11 14:04:32 INFO  Block delete coverageTest/5370 Duration: 0.028
+2015-06-11 14:04:32 INFO  Block delete coverageTest/5380 Duration: 0.041
+2015-06-11 14:04:32 INFO  Block delete coverageTest/5390 Duration: 0.027
+2015-06-11 14:04:32 INFO  Block delete coverageTest/5400 Duration: 0.036
+2015-06-11 14:04:33 INFO  Block delete coverageTest/5410 Duration: 0.026
+2015-06-11 14:04:33 INFO  Block delete coverageTest/5420 Duration: 0.04
+2015-06-11 14:04:33 INFO  Block delete coverageTest/5430 Duration: 0.03
+2015-06-11 14:04:33 INFO  Block delete coverageTest/5440 Duration: 0.024
+2015-06-11 14:04:33 INFO  Block delete coverageTest/5450 Duration: 0.027
+2015-06-11 14:04:33 INFO  Block delete coverageTest/5460 Duration: 0.031
+2015-06-11 14:04:33 INFO  Block delete coverageTest/5470 Duration: 0.029
+2015-06-11 14:04:34 INFO  Block delete coverageTest/5480 Duration: 0.024
+2015-06-11 14:04:34 INFO  Block delete coverageTest/5490 Duration: 0.031
+2015-06-11 14:04:34 INFO  Block delete coverageTest/5500 Duration: 0.027
+2015-06-11 14:04:34 INFO  Block delete coverageTest/5510 Duration: 0.029
+2015-06-11 14:04:34 INFO  Block delete coverageTest/5520 Duration: 0.03
+2015-06-11 14:04:34 INFO  Block delete coverageTest/5530 Duration: 0.03
+2015-06-11 14:04:34 INFO  Block delete coverageTest/5540 Duration: 0.026
+2015-06-11 14:04:35 INFO  Block delete coverageTest/5550 Duration: 0.033
+2015-06-11 14:04:35 INFO  Block delete coverageTest/5560 Duration: 0.025
+2015-06-11 14:04:35 INFO  Block delete coverageTest/5570 Duration: 0.029
+2015-06-11 14:04:35 INFO  Block delete coverageTest/5580 Duration: 0.032
+2015-06-11 14:04:35 INFO  Block delete coverageTest/5590 Duration: 0.024
+2015-06-11 14:04:35 INFO  Block delete coverageTest/5600 Duration: 0.031
+2015-06-11 14:04:36 INFO  Block delete coverageTest/5610 Duration: 0.029
+2015-06-11 14:04:36 INFO  Block delete coverageTest/5620 Duration: 0.031
+2015-06-11 14:04:36 INFO  Block delete coverageTest/5630 Duration: 0.027
+2015-06-11 14:04:36 INFO  Block delete coverageTest/5640 Duration: 0.032
+2015-06-11 14:04:36 INFO  Block delete coverageTest/5650 Duration: 0.038
+2015-06-11 14:04:36 INFO  Block delete coverageTest/5660 Duration: 0.027
+2015-06-11 14:04:36 INFO  Block delete coverageTest/5670 Duration: 0.027
+2015-06-11 14:04:37 INFO  Block delete coverageTest/5680 Duration: 0.027
+2015-06-11 14:04:37 INFO  Block delete coverageTest/5690 Duration: 0.027
+2015-06-11 14:04:37 INFO  Block delete coverageTest/5700 Duration: 0.028
+2015-06-11 14:04:37 INFO  Block delete coverageTest/5710 Duration: 0.03
+2015-06-11 14:04:37 INFO  Block delete coverageTest/5720 Duration: 0.028
+2015-06-11 14:04:37 INFO  Block delete coverageTest/5730 Duration: 0.027
+2015-06-11 14:04:37 INFO  Block delete coverageTest/5740 Duration: 0.025
+2015-06-11 14:04:38 INFO  Block delete coverageTest/5750 Duration: 0.027
+2015-06-11 14:04:38 INFO  Block delete coverageTest/5760 Duration: 0.027
+2015-06-11 14:04:38 INFO  Block delete coverageTest/5770 Duration: 0.028
+2015-06-11 14:04:38 INFO  Block delete coverageTest/5780 Duration: 0.027
+2015-06-11 14:04:38 INFO  Block delete coverageTest/5790 Duration: 0.03
+2015-06-11 14:04:38 INFO  Block delete coverageTest/5800 Duration: 0.024
+2015-06-11 14:04:38 INFO  Block delete coverageTest/5810 Duration: 0.026
+2015-06-11 14:04:39 INFO  Block delete coverageTest/5820 Duration: 0.026
+2015-06-11 14:04:39 INFO  Block delete coverageTest/5830 Duration: 0.029
+2015-06-11 14:04:39 INFO  Block delete coverageTest/5840 Duration: 0.024
+2015-06-11 14:04:39 INFO  Block delete coverageTest/5850 Duration: 0.025
+2015-06-11 14:04:39 INFO  Block delete coverageTest/5860 Duration: 0.028
+2015-06-11 14:04:39 INFO  Block delete coverageTest/5870 Duration: 0.026
+2015-06-11 14:04:39 INFO  Block delete coverageTest/5880 Duration: 0.027
+2015-06-11 14:04:40 INFO  Block delete coverageTest/5890 Duration: 0.025
+2015-06-11 14:04:40 INFO  Block delete coverageTest/5900 Duration: 0.025
+2015-06-11 14:04:40 INFO  Block delete coverageTest/5910 Duration: 0.024
+2015-06-11 14:04:40 INFO  Block delete coverageTest/5920 Duration: 0.031
+2015-06-11 14:04:40 INFO  Block delete coverageTest/5930 Duration: 0.027
+2015-06-11 14:04:40 INFO  Block delete coverageTest/5940 Duration: 0.03
+2015-06-11 14:04:40 INFO  Block delete coverageTest/5950 Duration: 0.027
+2015-06-11 14:04:41 INFO  Block delete coverageTest/5960 Duration: 0.032
+2015-06-11 14:04:41 INFO  Block delete coverageTest/5970 Duration: 0.028
+2015-06-11 14:04:41 INFO  Block delete coverageTest/5980 Duration: 0.03
+2015-06-11 14:04:41 INFO  Block delete coverageTest/5990 Duration: 0.034
+2015-06-11 14:04:41 INFO  Block delete coverageTest/6000 Duration: 0.027
+2015-06-11 14:04:41 INFO Adding blocks. Start: 8000 End: 8501 Int: 10 Pay: /media/USB1/mine/git/public/riak/data/testBlock.dat
+2015-06-11 14:04:41 INFO  Block delete coverageTest/8000 Duration: 0.027
+2015-06-11 14:04:41 INFO  Block delete coverageTest/8010 Duration: 0.031
+2015-06-11 14:04:42 INFO  Block delete coverageTest/8020 Duration: 0.026
+2015-06-11 14:04:42 INFO  Block delete coverageTest/8030 Duration: 0.029
+2015-06-11 14:04:42 INFO  Block delete coverageTest/8040 Duration: 0.031
+2015-06-11 14:04:42 INFO  Block delete coverageTest/8050 Duration: 0.025
+2015-06-11 14:04:42 INFO  Block delete coverageTest/8060 Duration: 0.025
+2015-06-11 14:04:42 INFO  Block delete coverageTest/8070 Duration: 0.024
+2015-06-11 14:04:42 INFO  Block delete coverageTest/8080 Duration: 0.028
+2015-06-11 14:04:43 INFO  Block delete coverageTest/8090 Duration: 0.027
+2015-06-11 14:04:43 INFO  Block delete coverageTest/8100 Duration: 0.027
+2015-06-11 14:04:43 INFO  Block delete coverageTest/8110 Duration: 0.032
+2015-06-11 14:04:43 INFO  Block delete coverageTest/8120 Duration: 0.027
+2015-06-11 14:04:43 INFO  Block delete coverageTest/8130 Duration: 0.031
+2015-06-11 14:04:43 INFO  Block delete coverageTest/8140 Duration: 0.036
+2015-06-11 14:04:43 INFO  Block delete coverageTest/8150 Duration: 0.027
+2015-06-11 14:04:44 INFO  Block delete coverageTest/8160 Duration: 0.031
+2015-06-11 14:04:44 INFO  Block delete coverageTest/8170 Duration: 0.032
+2015-06-11 14:04:44 INFO  Block delete coverageTest/8180 Duration: 0.031
+2015-06-11 14:04:44 INFO  Block delete coverageTest/8190 Duration: 0.027
+2015-06-11 14:04:44 INFO  Block delete coverageTest/8200 Duration: 0.03
+2015-06-11 14:04:44 INFO  Block delete coverageTest/8210 Duration: 0.038
+2015-06-11 14:04:44 INFO  Block delete coverageTest/8220 Duration: 0.034
+2015-06-11 14:04:45 INFO  Block delete coverageTest/8230 Duration: 0.029
+2015-06-11 14:04:45 INFO  Block delete coverageTest/8240 Duration: 0.028
+2015-06-11 14:04:45 INFO  Block delete coverageTest/8250 Duration: 0.027
+2015-06-11 14:04:45 INFO  Block delete coverageTest/8260 Duration: 0.029
+2015-06-11 14:04:45 INFO  Block delete coverageTest/8270 Duration: 0.024
+2015-06-11 14:04:45 INFO  Block delete coverageTest/8280 Duration: 0.029
+2015-06-11 14:04:45 INFO  Block delete coverageTest/8290 Duration: 0.029
+2015-06-11 14:04:46 INFO  Block delete coverageTest/8300 Duration: 0.024
+2015-06-11 14:04:46 INFO  Block delete coverageTest/8310 Duration: 0.026
+2015-06-11 14:04:46 INFO  Block delete coverageTest/8320 Duration: 0.027
+2015-06-11 14:04:46 INFO  Block delete coverageTest/8330 Duration: 0.047
+2015-06-11 14:04:46 INFO  Block delete coverageTest/8340 Duration: 0.025
+2015-06-11 14:04:46 INFO  Block delete coverageTest/8350 Duration: 0.025
+2015-06-11 14:04:46 INFO  Block delete coverageTest/8360 Duration: 0.029
+2015-06-11 14:04:47 INFO  Block delete coverageTest/8370 Duration: 0.028
+2015-06-11 14:04:47 INFO  Block delete coverageTest/8380 Duration: 0.026
+2015-06-11 14:04:47 INFO  Block delete coverageTest/8390 Duration: 0.033
+2015-06-11 14:04:47 INFO  Block delete coverageTest/8400 Duration: 0.025
+2015-06-11 14:04:47 INFO  Block delete coverageTest/8410 Duration: 0.029
+2015-06-11 14:04:47 INFO  Block delete coverageTest/8420 Duration: 0.032
+2015-06-11 14:04:47 INFO  Block delete coverageTest/8430 Duration: 0.036
+2015-06-11 14:04:48 INFO  Block delete coverageTest/8440 Duration: 0.031
+2015-06-11 14:04:48 INFO  Block delete coverageTest/8450 Duration: 0.026
+2015-06-11 14:04:48 INFO  Block delete coverageTest/8460 Duration: 0.026
+2015-06-11 14:04:48 INFO  Block delete coverageTest/8470 Duration: 0.025
+2015-06-11 14:04:48 INFO  Block delete coverageTest/8480 Duration: 0.027
+2015-06-11 14:04:48 INFO  Block delete coverageTest/8490 Duration: 0.029
+2015-06-11 14:04:48 INFO  Block delete coverageTest/8500 Duration: 0.029

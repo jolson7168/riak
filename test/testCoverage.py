@@ -28,7 +28,7 @@ def modifyTestData(riak, action, testFile):
 		reader = csv.reader(ifile)
 		for row in reader:
 			if not row[0][0]=="#":
-					modifyBlocks(riak, action, int(row[0]),int(row[1]),int(row[2]),row[3])
+					modifyBlocks(riak, action, row[0],int(row[1]),int(row[2]),int(row[3]),row[4])
 	except Exception as e:
 		logger.error("Error loading test data: "+e.message)
 
@@ -45,15 +45,15 @@ def writeRiak(riak, action, bucketname, key, data, mimeType):
 		startTime = time.time()
 		obj.store()
 		duration = round((time.time() - startTime),3)
-		logger.info(" Block write "+bucketname+"/"+key+" Sz: "+str(len(data))+" Dur: "+str(duration))
+		logger.info(" Block write "+(bucketname[-3:])+"/"+key+" Sz: "+str(len(data))+" Dur: "+str(duration))
 	elif action == "delete":
 		got = bucket.get(key)
 		startTime = time.time()
 		got.delete()
 		duration = round((time.time() - startTime),3)
-		logger.info(" Block delete "+bucketname+"/"+key+" Duration: "+str(duration))
+		logger.info(" Block delete "+(bucketname[-3:])+"/"+key+" Duration: "+str(duration))
 
-def modifyBlocks(riak, action, startTime, endTime, interval,payload):
+def modifyBlocks(riak, action, pid, startTime, endTime, interval,payload):
 	logger.info("Adding blocks. Start: "+str(startTime)+" End: "+str(endTime)+" Int: "+str(interval)+" Pay: "+payload)
 	if isinstance(payload, basestring):
 		try:
@@ -68,7 +68,7 @@ def modifyBlocks(riak, action, startTime, endTime, interval,payload):
 		writePayload=''.join(random.SystemRandom().choice(string.ascii_uppercase + string.digits) for _ in range(int(payload)))
 		mimeType='text/plain'
 	for x in range(startTime, endTime, interval):
-		writeRiak(riak, action, "coverageTest", str(x), writePayload,mimeType)
+		writeRiak(riak, action, pid, str(x)+":"+str(x+interval), writePayload,mimeType)
 
 
 def configRiak(clusterAddresses, clusterPort):
@@ -123,6 +123,4 @@ if __name__ == '__main__':
 	modifyTestData(riak,"write",cfg.get('app', 'testfile'))
 	modifyTestData(riak,"delete",cfg.get('app', 'testfile'))
 
-#Notes
-#curl http://104.197.19.1:8098/buckets/coverageTest/keys/20
 

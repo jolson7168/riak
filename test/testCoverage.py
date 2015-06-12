@@ -33,7 +33,7 @@ def modifyTestData(riak, action, testFile):
 		logger.error("Error loading test data: "+e.message)
 
 
-def writeRiak(riak, action, bucketname, key, data, mimeType):
+def writeRiak(riak, action, bucketname, key, data, mimeType, index=None):
 	bucket = riak.bucket(bucketname)
 	if action == "write":
 		obj = RiakObject(riak, bucket, key)
@@ -42,6 +42,12 @@ def writeRiak(riak, action, bucketname, key, data, mimeType):
 			obj.encoded_data = data
 		else:
 			obj.data = data
+		if index is not None:
+				for indexKey in index:
+					try:
+						obj.add_index(indexKey,index[indexKey])
+					except Exception as e:
+							logger.error("Error updating index: "+e.message)
 		startTime = time.time()
 		obj.store()
 		duration = round((time.time() - startTime),3)
@@ -68,7 +74,8 @@ def modifyBlocks(riak, action, pid, startTime, endTime, interval,payload):
 		writePayload=''.join(random.SystemRandom().choice(string.ascii_uppercase + string.digits) for _ in range(int(payload)))
 		mimeType='text/plain'
 	for x in range(startTime, endTime, interval):
-		writeRiak(riak, action, pid, str(x)+":"+str(x+interval), writePayload,mimeType)
+		index={"start_int":int(x+1),"end_int":int(x+interval)}
+		writeRiak(riak, action, pid, str(x+1)+":"+str(x+interval), writePayload,mimeType,index)
 
 
 def configRiak(clusterAddresses, clusterPort):
@@ -94,6 +101,66 @@ def getCmdLineParser():
 
     return parser
 
+def keysToArray(keys):
+	tempArray=[]
+	#logger.info("Keys: "+str(len(keys)))
+	for key in keys:
+		newArray=[int(x) for x in key.split(":")]
+		tempArray.append(newArray)
+
+	#logger.info("Array: "+str(len(tempArray)))
+	return sorted(tempArray)
+
+def dumpArray(theArray):
+	s="[ "
+	for interval in theArray:
+		s=s+"["+str(interval[0])+", "+str(interval[1])+"], "
+	s=s+" ]"
+
+	return s
+
+def calculateCoverage(riak, bucketName, startTime, endTime):
+
+	coverageArray=[]
+	bucket = riak.bucket(bucketName)
+
+	#Check the start point...
+	startArray=keysToArray(bucket.get_index('start_int', 0, startTime))
+#	logger.info("len: "+str(len(startArray))+" Start: "+dumpArray(startArray))
+#	logger.info("len: "+str(len(endArray))+" End: "+dumpArray(endArray))
+	if len(startArray)>1:
+		lastStart=startArray[len(startArray)-1]
+		#logger.info("lastStart: ["+str(lastStart[0])+", "+str(lastStart[1])+"]")
+	elif len(startArray)==1:	
+		lastStart=startArray[1]
+		#logger.info("lastStart: ["+str(lastStart[0])+", "+str(lastStart[1])+"]")
+
+	if lastStart is not None:
+		if startTime in lastStart:
+			addOne=[]
+			addOne.append(startTime)
+			addOne.append(lastStart[1])
+			coverageArray.append(addOne)
+
+	#Get the middle...
+	greaterThanStart=keysToArray(bucket.get_index('start_int', startTime,10000000000))
+	lessThanEnd=keysToArray(bucket.get_index('end_int', 0,endTime))
+	common = set(map(tuple, greaterThanStart)) & set(map(tuple, lessThanEnd))
+	coverageArray.extend(sorted(common))
+
+	#Check the end point...
+	endArray=keysToArray(bucket.get_index('end_int', endTime, 10000000000))
+	if len(endArray)>0:
+		if endTime in endArray[0]:
+			addOne=[]
+			addOne.append(endArray[0][0])
+			addOne.append(endTime)
+			coverageArray.append(addOne)
+
+
+	return coverageArray
+
+	
 
 if __name__ == '__main__':
 
@@ -120,7 +187,11 @@ if __name__ == '__main__':
     # Configure the connection to Riak 
     #
 	riak = configRiak(json.loads(cfg.get('riak', 'cluster')),cfg.get('riak', 'port'))
-	modifyTestData(riak,"write",cfg.get('app', 'testfile'))
-	modifyTestData(riak,"delete",cfg.get('app', 'testfile'))
+	#modifyTestData(riak,"write",cfg.get('app', 'testfile'))
+	#modifyTestData(riak,"delete",cfg.get('app', 'testfile'))
 
-
+	startQTime = time.time()
+	coverage=calculateCoverage(riak,'93AF8721-1676-44B3-02EB-F9916F7AC46F', 8400,8600)
+	duration = round((time.time() - startQTime),3)
+	
+	logger.info("Duration: "+str(duration)+" Results: "+dumpArray(coverage))

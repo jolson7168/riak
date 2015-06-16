@@ -61,7 +61,10 @@ def writeRiak(riak, action, bucketname, key, data, mimeType, index=None):
 
 def modifyBlocks(riak, action, pid, startTime, endTime, interval,payload):
 	logger.info("Adding blocks. Start: "+str(startTime)+" End: "+str(endTime)+" Int: "+str(interval)+" Pay: "+payload)
-	if isinstance(payload, basestring):
+	if isinstance(payload, int):
+		writePayload = open("/dev/urandom","rb").read(payload)		
+		mimeType="application/octet-stream"
+	elif isinstance(payload, basestring):
 		try:
 			f = open(payload, "rb")
 			writePayload=f.read()

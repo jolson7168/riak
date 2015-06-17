@@ -7,6 +7,8 @@ from riak import RiakClient
 from riak import RiakObject
 from ConfigParser import RawConfigParser
 
+
+#Turn this all into a class.....
 def currentDayStr():
 	return time.strftime("%Y%m%d")
 
@@ -31,6 +33,16 @@ def modifyTestData(riak, action, testFile):
 					modifyBlocks(riak, action, row[0],int(row[1]),int(row[2]),int(row[3]),row[4])
 	except Exception as e:
 		logger.error("Error loading test data: "+e.message)
+
+def testIfInt(candidate):
+	retval = False
+	try:
+		intPayload = int(candidate)
+		retval = True
+	except ValueError:
+		pass  
+	return retval
+
 
 
 def writeRiak(riak, action, bucketname, key, data, mimeType, index=None):
@@ -60,11 +72,12 @@ def writeRiak(riak, action, bucketname, key, data, mimeType, index=None):
 		logger.info(" Block delete "+(bucketname[-3:])+"/"+key+" Duration: "+str(duration))
 
 def modifyBlocks(riak, action, pid, startTime, endTime, interval,payload):
-	logger.info("Adding blocks. Start: "+str(startTime)+" End: "+str(endTime)+" Int: "+str(interval)+" Pay: "+payload)
-	if isinstance(payload, int):
-		writePayload = open("/dev/urandom","rb").read(payload)		
+	logger.info("Adding blocks. Start: "+str(startTime)+" End: "+str(endTime)+" Int: "+str(interval)+" Pay: "+str(payload))
+	isInt=testIfInt(payload)
+	if isInt:
+		writePayload = open("/dev/urandom","rb").read(int(payload))		
 		mimeType="application/octet-stream"
-	elif isinstance(payload, basestring):
+	else:
 		try:
 			f = open(payload, "rb")
 			writePayload=f.read()
@@ -73,12 +86,12 @@ def modifyBlocks(riak, action, pid, startTime, endTime, interval,payload):
 			raise Exception, "Error reading block file "+payload
 		finally:
 			f.close()
-	else:
-		writePayload=''.join(random.SystemRandom().choice(string.ascii_uppercase + string.digits) for _ in range(int(payload)))
-		mimeType='text/plain'
+	#else:
+	#	writePayload=''.join(random.SystemRandom().choice(string.ascii_uppercase + string.digits) for _ in range(int(payload)))
+	#	mimeType='text/plain'
 	for x in range(startTime, endTime, interval):
-		index={"start_int":int(x+1),"end_int":int(x+interval)}
-		writeRiak(riak, action, pid, str(x+1)+":"+str(x+interval), writePayload,mimeType,index)
+		index={"start_int":int(x),"end_int":int(x+interval)}
+		writeRiak(riak, action, pid, str(x)+":"+str(x+interval), writePayload,mimeType,index)
 
 
 def configRiak(clusterAddresses, clusterPort):
@@ -121,6 +134,14 @@ def dumpArray(theArray):
 	s=s+" ]"
 
 	return s
+
+def loadData(riak, filename):
+		modifyTestData(riak,"write",filename)
+
+def unloadData(riak, filename):
+		modifyTestData(riak,"delete",filename)
+
+
 
 def calculateCoverage(riak, bucketName, startTime, endTime):
 
@@ -189,12 +210,18 @@ if __name__ == '__main__':
     ##################################################
     # Configure the connection to Riak 
     #
+
+    # Make Connection
 	riak = configRiak(json.loads(cfg.get('riak', 'cluster')),cfg.get('riak', 'port'))
+
+	# Load Test Data
 	#modifyTestData(riak,"write",cfg.get('app', 'testfile'))
 	#modifyTestData(riak,"delete",cfg.get('app', 'testfile'))
+	loadData(riak, "../test/TestCase1.csv")
 
-	startQTime = time.time()
-	coverage=calculateCoverage(riak,'93AF8721-1676-44B3-02EB-F9916F7AC46F', 8400,8600)
-	duration = round((time.time() - startQTime),3)
+	# Calculate Coverage
+	#startQTime = time.time()
+	#coverage=calculateCoverage(riak,'93AF8721-1676-44B3-02EB-F9916F7AC46F', 8400,8600)
+	#duration = round((time.time() - startQTime),3)
 	
-	logger.info("Duration: "+str(duration)+" Results: "+dumpArray(coverage))
+	#logger.info("Duration: "+str(duration)+" Results: "+dumpArray(coverage))

@@ -15,6 +15,7 @@ import time               # sleep function for connection back-off
 import json               # JSON object encoding/decoding
 import logging
 
+import riakLib
 from ConfigParser import RawConfigParser
 
 ###################################################
@@ -48,44 +49,6 @@ def initLog():
     logger.setLevel(logging.INFO)
     return logger
 
-def configureRiak(riakIPs, riakPort):
-
-
-    initial_attempts = 5
-    num_attempts = 0
-
-    initial_delay = 5      # 5 seconds between between initial attempts
-    longer_delay = 5*60    # 5 minutes = 300 seconds
-    delay_time = initial_delay
-
-    nodes=[]
-    for eachNode in riakIPs.split(","):
-        thisNode= { 'host': eachNode, 'pb_port': riakPort}
-        nodes.append(thisNode)
-
-    riakIP=""
-    for node in nodes:
-        riakIP=json.dumps(node)+ " - " +riakIP
-
-    logger.info('[STATE] Connecting to Riak...')
-
-    connected = False  
-    client = RiakClient(protocol='pbc',nodes=nodes)
-    while not connected:
-	   try:
-            logger.info("Attempting to PING....")
-            client.ping()
-            connected = True
-	   except:
-            num_attempts += 1
-            logger.error('EXCP: No Riak server found')
-            if num_attempts == initial_attempts:
-                delay_time = longer_delay
-                # Wait to issue next connection attempt
-                time.sleep(delay_time)
-
-    logger.info('[STATE] Connected to Riak. Successful PING')
-    return client
 
 
 def getCmdLineParser():
@@ -98,8 +61,9 @@ def getCmdLineParser():
 
     return parser
 
-def writeRiak(riak, obj):
-    print("Write!")
+def sendToRiak(riak, obj):
+    #modifyBlocks(riak, action, pid, startTime, endTime, interval,payload,logger):
+    riakLib.modifyBlocks(riak, obj["action"],obj["id"],int(obj["startTime"]),int(obj["endTime"]),int(obj["interval"]),int(obj["size"]),logger)
 
 if __name__ == '__main__':
 
@@ -121,7 +85,7 @@ if __name__ == '__main__':
 
     riakIP = cfg.get('riak', 'cluster')
     riakPort = cfg.get('riak', 'port')
-    riak = configureRiak(riakIP, riakPort)
+    riak = riakLib.configureRiak(riakIP, riakPort,logger)
 
     credentials = pika.PlainCredentials(msgQLogin, msgQPass)
     connection = pika.BlockingConnection(pika.ConnectionParameters(msgQServerURL,credentials=credentials))
@@ -134,7 +98,7 @@ if __name__ == '__main__':
         duration = round((time.time() - startTime),3)
         logger.info("Fetched from LoadQ: "+str(duration))
         if method_frame:
-            writeRiak(riak,json.loads(body))
+            sendToRiak(riak,json.loads(body))
             channel.basic_ack(method_frame.delivery_tag)
         else:
             done = True

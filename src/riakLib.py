@@ -26,20 +26,16 @@ def writeRiak(riak, action, bucketname, key, data, mimeType, logger, index=None)
 			obj.encoded_data = data
 		else:
 			obj.data = data
-		indexTime=""
 		if index is not None:
 				for indexKey in index:
 					try:
-						startTime2 = time.time()
 						obj.add_index(indexKey,index[indexKey])
-						duration2 = round((time.time() - startTime2),3)
-						indexTime = " - "+str(duration2)
 					except Exception as e:
-							logger.error("Error updating index: "+e.message)
+						logger.error("Error updating index: "+e.message)
 		startTime = time.time()
 		obj.store()
 		duration = round((time.time() - startTime),3)
-		logger.info(" Write "+(bucketname[-3:])+"/"+key+" Sz: "+str(len(data))+" Dur: "+str(duration) + indexTime)
+		logger.info(" Write "+(bucketname[-3:])+"/"+key+" Sz: "+str(len(data))+" Dur: "+str(duration))
 	elif action == "delete":
 		got = bucket.get(key)
 		startTime = time.time()

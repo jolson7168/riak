@@ -44,7 +44,6 @@ def calculatePayload(size, units):
 def generateData(testParams):
 	uniqueID=uuid.uuid1()
 	data=[]
-	expectedCoverage=[]
 	startTime = getTime(testParams["startTime"],testParams["startTimeMask"],testParams["multiplier"])
 	interval = getTimeOffset(testParams["interval"],testParams["intervalUnits"])
 	endTime = getEndTime(testParams["startTime"],testParams["startTimeMask"],testParams["duration"],testParams["durationUnits"])
@@ -67,17 +66,13 @@ def generateData(testParams):
 		if monitorStatus != currentMonitorStatus:
 			if not monitorStatus:
 				data.append(str(uniqueID).upper()+", "+str(newStartTime)+", "+str(currentTime)+", "+str(interval)+", "+str(int(payload)))
-				thisOne=[]
-				thisOne.append(newStartTime)
-				thisOne.append(currentTime)
-				expectedCoverage.append(thisOne)
 			newStartTime = currentTime+interval
 			currentMonitorStatus=monitorStatus
 
 		currentTime = currentTime+interval
 
 
-	return data,expectedCoverage
+	return data
 
 def getTime(timeString, timeMask, multiplier):
 	return int(time.mktime(datetime.datetime.strptime(timeString, timeMask).timetuple())*multiplier)
@@ -90,7 +85,7 @@ def saveBytes(fname, bytes):
 	target.write(bytes)
 	target.close
 
-def writeFiles(testParams, data, coverage):
+def writeFiles(testParams, data):
 	f=open(testParams["testfilename"],'w')
 	f.write("# "+testParams["testfilename"]+"\n")
 	f.write("# "+testParams["comment"]+"\n")
@@ -98,14 +93,6 @@ def writeFiles(testParams, data, coverage):
 		f.write(block+"\n")
 	f.close()
 
-	coverageStr="[ "+"\n"
-	for block2 in coverage:
-		coverageStr=coverageStr+"["+str(block2[0])+", "+str(block2[1])+"], "+"\n"
-	coverageStr = coverageStr+" ]"+"\n"
-
-	f2=open(testParams["coveragefilename"],'w')
-	f2.write(coverageStr)
-	f2.close()
 
 testDataInputs={"onTime":8, "onTimeUnits":"hours",
 				"offTime":4, "offTimeUnits":"hours", 
@@ -113,14 +100,13 @@ testDataInputs={"onTime":8, "onTimeUnits":"hours",
 				"interval":10,"intervalUnits":"minutes", 
 				"duration":365,"durationUnits":"days", 
 				"startTime":"2015-01-01 000000.000", "startTimeMask":"%Y-%m-%d %H%M%S.%f", "multiplier":1000,
-				"testfilename":"TestCase1.csv", "comment":"One patient, one year, 8 hours on, 4 hours off, 1.2mb/10min",
-				"coveragefilename":"Coverage_TestCase1.csv"}      
+				"testfilename":"TestCase1.csv", "comment":"One patient, one year, 8 hours on, 4 hours off, 1.2mb/10min"}      
 
 
 #print(getTime('2015-01-01 000001.000', "%Y-%m-%d %H%M%S.%f", 1000))
 #   1451628001
-testData, coverage = generateData(testDataInputs)
-writeFiles(testDataInputs, testData,coverage)
+testData = generateData(testDataInputs)
+writeFiles(testDataInputs, testData)
 #print("Test Data........................")
 #for line in testData:
 #	print(line)

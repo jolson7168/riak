@@ -4,7 +4,7 @@ import pika
 import sys
 import getopt
 
-def sendData(uploadFile,queueserver,login, password, exchange, route):
+def sendData(uploadFile,queueserver,login, password, exchange, route, action):
 
 	credentials = pika.PlainCredentials(login, password)
 	connection = pika.BlockingConnection(pika.ConnectionParameters(queueserver,credentials=credentials))
@@ -15,7 +15,7 @@ def sendData(uploadFile,queueserver,login, password, exchange, route):
 		reader = csv.reader(ifile)
 		for row in reader:
 			if not row[0][0]=="#":
-					msg={"action":"write","id":row[0],"startTime":int(row[1]),"endTime":int(row[2]),"interval":int(row[3]),"size":int(row[4])}
+					msg={"action":action,"id":row[0],"startTime":int(row[1]),"endTime":int(row[2]),"interval":int(row[3]),"size":int(row[4])}
 					channel.basic_publish(exchange=exchange,routing_key=route,body=json.dumps(msg))
 					print "Sent: "+json.dumps(msg)
 	except Exception as e:
@@ -26,14 +26,14 @@ def sendData(uploadFile,queueserver,login, password, exchange, route):
 
 def main(argv):
  	try:
-		opts, args = getopt.getopt(argv,"hdqlper:",["datafile=","queueserver=","login=","password=","exchange=","route="])
+		opts, args = getopt.getopt(argv,"hdqlpera:",["datafile=","queueserver=","login=","password=","exchange=","route=","action="])
 	except getopt.GetoptError:
-		print ('loadQueue.py -d <file to upload> -q <ip of queue server> -l <login> -p <password> -e <exchange> -r <route>')
+		print ('loadQueue.py -d <file to upload> -q <ip of queue server> -l <login> -p <password> -e <exchange> -r <route> -a <action>')
 		sys.exit(2)
 
 	for opt, arg in opts:
 		if opt == '-h':
-			print ('loadQueue.py -d <file to upload> -q <ip of queue server> -l <login> -p <password> -e <exchange> -r <route>')
+			print ('loadQueue.py -d <file to upload> -q <ip of queue server> -l <login> -p <password> -e <exchange> -r <route> -a <action>')
 			sys.exit()
 		elif opt in ("-d", "--datafile"):
 			uploadFile=arg
@@ -52,8 +52,10 @@ def main(argv):
 			exchange=arg
 		elif opt in ("-r", "--route"):
 			route=arg
+		elif opt in ("-a", "--action"):
+			action=arg
 
-	sendData(uploadFile,queueserver,login, password, exchange, route)
+	sendData(uploadFile,queueserver,login, password, exchange, route, action)
 
 if __name__ == "__main__":
 	main(sys.argv[1:])

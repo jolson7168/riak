@@ -4,7 +4,7 @@
 ;  TESTFILE	 : contains the data to load to test coverage
 
 [app]
-TESTFILE=../test/coverageTestCases.csv
+TESTFILES=../data/TC1_4hrCoverage.csv
 
 ;----------------------------------------------------------
 ; Configures the settings for the Riak cluster

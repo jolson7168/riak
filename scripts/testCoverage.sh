@@ -1,1 +1,0 @@
-python ../test/testCoverage.py --file ../config/coverageTestCases_config

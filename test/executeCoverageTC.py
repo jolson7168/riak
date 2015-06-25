@@ -14,6 +14,8 @@ import sys
 import time               # sleep function for connection back-off
 import json               # JSON object encoding/decoding
 import logging
+import csv
+import ast
 
 import riakLib
 from ConfigParser import RawConfigParser
@@ -21,18 +23,33 @@ from ConfigParser import RawConfigParser
 ###################################################
 # Third party modules (libraries)
 #
-import pika               	# RabbitMQ AMQP client
 from riak import RiakClient
 from riak import RiakObject
 ###################################################
 # File global variables
 #
 version_info = ('0', '5', '0')     # Major, minor, patch
-g_app_name = 'LoadRiakFromQ'
+g_app_name = 'executeCoverageTC'
 g_app_version = '.'.join(version_info)
 
 g_end_prev = time.time()           # end time previous time
 
+def compareArrays(gotArray, expectedString):
+	if expectedString.strip()=="[]":
+		newArray=[]
+	else:
+		newArray=ast.literal_eval(expectedString)
+	if newArray == gotArray:
+		return "PASS"
+	else:
+		return "FAIL"
+
+def dumpCoverage(coverage):
+	thisOne=""
+	for interval in coverage:
+		thisOne = thisOne+"["+str(interval[0])+", "+str(interval[1])+"], "
+	thisOne=thisOne[:-2]
+	return "["+thisOne+"]"
 
 def currentDayStr():
     return time.strftime("%Y%m%d")
@@ -49,20 +66,34 @@ def initLog():
     logger.setLevel(logging.INFO)
     return logger
 
+def getTestCases(tc):
+	cases=[]
+	for eachTC in tc.split(","):
+		cases.append(eachTC)
+	return cases
 
+def executeTestCase(riak, test):
+	#try:
+	ifile  = open(test, "r")
+	reader = csv.reader(ifile,delimiter='|')
+	for row in reader:
+		startTime = time.time()
+		results = riakLib.calculateCoverage(riak, row[0],int(row[1]),int(row[2]))
+		duration = round((time.time() - startTime),3)
+		results = compareArrays(results, row[3])
+		logger.info("Dur: "+str(duration)+" Results: "+ results)
+	#except Exception as e:
+	#	print ("Error loading test data: "+e.message)
 
 def getCmdLineParser():
     import argparse
-    desc = 'Pull data from rabbitMQ and put it on Riak'
+    desc = 'Execute coverage test cases'
     parser = argparse.ArgumentParser(description=desc)
 
-    parser.add_argument('-f', '--file', default='defragger',
+    parser.add_argument('-f', '--file', default='../config/coverageTestCases_config',
                         help='optional configuration file name (*.ini format)')
 
     return parser
-
-def sendToRiak(riak, obj):
-    riakLib.modifyBlocks(riak, obj["action"],obj["id"],int(obj["startTime"]),int(obj["endTime"]),int(obj["interval"]),int(obj["size"]),logger)
 
 if __name__ == '__main__':
 
@@ -75,35 +106,23 @@ if __name__ == '__main__':
     logger = initLog()
     logger.info('Starting Run: '+currentDayStr()+'  ==============================')
 
-    msgQServerURL = cfg.get('rabbitmq', 'server_url')
-    msgQName = cfg.get('rabbitmq', 'queue')
-    msgQLogin = cfg.get('rabbitmq', 'login')    
-    msgQPass = cfg.get('rabbitmq', 'password')
-
-
-
     riakIP = cfg.get('riak', 'cluster')
     riakPort = cfg.get('riak', 'port')
     riak = riakLib.configureRiak(riakIP, riakPort,logger)
+    testCases = getTestCases(cfg.get('app', 'testfiles'))
+    for test in testCases:
+    	executeTestCase(riak, test)
+    	
 
-    credentials = pika.PlainCredentials(msgQLogin, msgQPass)
-    connection = pika.BlockingConnection(pika.ConnectionParameters(msgQServerURL,credentials=credentials))
-    channel = connection.channel()
-
-    done = False
-    while not done:
-        startTime = time.time()
-        method_frame, header_frame, body = channel.basic_get(msgQName)
-        duration = round((time.time() - startTime),3)
-        logger.info("Fetched from LoadQ: "+str(duration))
-        if method_frame:
-            sendToRiak(riak,json.loads(body))
-            channel.basic_ack(method_frame.delivery_tag)
-        else:
-            done = True
-    
-    connection.close()   
     logger.info('Ending Run: '+currentDayStr()+'  ==============================')
+
+
+
+
+
+
+	
+
 
 
 

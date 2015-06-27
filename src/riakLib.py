@@ -43,9 +43,13 @@ def writeRiak(riak, action, bucketname, key, data, mimeType, logger, index=None)
 					except Exception as e:
 						logger.error("Error updating index: "+e.message)
 		startTime = time.time()
-		obj.store()
+		storedObj = obj.store()
 		duration = round((time.time() - startTime),3)
-		logger.info(" Write "+(bucketname[-3:])+"/"+key+" Sz: "+str(len(data))+" Dur: "+str(duration))
+		if storedObj is not None:
+			results = storedObj.key
+		else
+			results = "Not stored!"
+		logger.info(" Write "+(bucketname[-3:])+"/"+key+" Sz: "+str(len(data))+" Dur: "+str(duration)+" Results: "+results)
 	elif action == "delete":
 		got = bucket.get(key)
 		startTime = time.time()
@@ -81,6 +85,7 @@ def calculateCoverage(riak, bucketName, startTime, endTime):
 	coverageArray=[]
 	bucket = riak.bucket(bucketName)
 
+	lastStart=None
 	startArray=keysToArray(bucket.get_index('start_int', 0, startTime))
 	if len(startArray)>1:
 		lastStart=startArray[len(startArray)-1]

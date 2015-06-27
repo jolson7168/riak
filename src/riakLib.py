@@ -47,7 +47,7 @@ def writeRiak(riak, action, bucketname, key, data, mimeType, logger, index=None)
 		duration = round((time.time() - startTime),3)
 		if storedObj is not None:
 			results = storedObj.key
-		else
+		else:
 			results = "Not stored!"
 		logger.info(" Write "+(bucketname[-3:])+"/"+key+" Sz: "+str(len(data))+" Dur: "+str(duration)+" Results: "+results)
 	elif action == "delete":

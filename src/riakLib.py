@@ -79,10 +79,33 @@ def modifyBlocks(riak, action, pid, startTime, endTime, interval,payload,logger)
 		index={"start_int":int(x),"end_int":int(x+interval)}
 		writeRiak(riak, action, pid, str(x)+":"+str(x+interval), writePayload,mimeType,logger, index)
 
+def cleanupArray(coverage,gap):
+	retval = []
+	currentStart = 0
+	x=0 
+	while x < (len(coverage)-1):
+		if currentStart == 0:
+			currentStart = coverage[x][0]
+		if ((coverage[x+1][0] - coverage[x][1]) > gap):
+			currentEnd = coverage[x][1]
+			newOne=[]
+			newOne.append(currentStart)
+			newOne.append(currentEnd)
+			retval.append(newOne)
+			currentStart=coverage[x+1][0]
+		x=x+1
+	if currentStart>0:
+			newOne=[]
+			newOne.append(currentStart)
+			newOne.append(coverage[x][1])
+			retval.append(newOne)
 
-def calculateCoverage(riak, bucketName, startTime, endTime):
+	return retval
+
+def calculateCoverage(riak, bucketName, startTime, endTime, gap):
 
 	coverageArray=[]
+	retval = []
 	bucket = riak.bucket(bucketName)
 
 	lastStart=None
@@ -100,13 +123,13 @@ def calculateCoverage(riak, bucketName, startTime, endTime):
 			coverageArray.append(addOne)
 
 	#Get the middle...
-	greaterThanStart=keysToArray(bucket.get_index('start_int', startTime,10000000000))
+	greaterThanStart=keysToArray(bucket.get_index('start_int', startTime,10000000000000))
 	lessThanEnd=keysToArray(bucket.get_index('end_int', 0,endTime))
 	common = set(map(tuple, greaterThanStart)) & set(map(tuple, lessThanEnd))
 	coverageArray.extend(sorted(common))
 
 	#Check the end point...
-	endArray=keysToArray(bucket.get_index('end_int', endTime, 10000000000))
+	endArray=keysToArray(bucket.get_index('end_int', endTime, 10000000000000))
 	if len(endArray)>0:
 		if endTime in endArray[0]:
 			addOne=[]
@@ -114,7 +137,8 @@ def calculateCoverage(riak, bucketName, startTime, endTime):
 			addOne.append(endTime)
 			coverageArray.append(addOne)
 
-	return coverageArray
+	retval = cleanupArray(coverageArray,gap)
+	return retval
 
 def configureRiak(riakIPs, riakPort,logger):
 

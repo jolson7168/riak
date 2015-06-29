@@ -72,18 +72,20 @@ def getTestCases(tc):
 		cases.append(eachTC)
 	return cases
 
-def executeTestCase(riak, test):
-	#try:
-	ifile  = open(test, "r")
-	reader = csv.reader(ifile,delimiter='|')
-	for row in reader:
-		startTime = time.time()
-		results = riakLib.calculateCoverage(riak, row[0],int(row[1]),int(row[2]))
-		duration = round((time.time() - startTime),3)
-		results = compareArrays(results, row[3])
-		logger.info("Dur: "+str(duration)+" Results: "+ results)
-	#except Exception as e:
-	#	print ("Error loading test data: "+e.message)
+def executeTestCase(riak, test,gap):
+	try:
+		ifile  = open(test, "r")
+		reader = csv.reader(ifile,delimiter='|')
+		for row in reader:
+			startTime = time.time()
+			results = riakLib.calculateCoverage(riak, row[0],int(row[1]),int(row[2]),gap)
+			duration = round((time.time() - startTime),3)
+			results2 = compareArrays(results, row[3])
+			logger.info("Dur: "+str(duration)+" Results: "+ results2)
+			if results2 == "FAIL":
+				logger.info("   Got: "+dumpCoverage(results)+"   Expected: "+row[3])			
+	except Exception as e:
+		print ("Error loading test data: "+e.message)
 
 def getCmdLineParser():
     import argparse
@@ -106,12 +108,13 @@ if __name__ == '__main__':
     logger = initLog()
     logger.info('Starting Run: '+currentDayStr()+'  ==============================')
 
+    gap = int(cfg.get('app', 'gap'))
     riakIP = cfg.get('riak', 'cluster')
     riakPort = cfg.get('riak', 'port')
     riak = riakLib.configureRiak(riakIP, riakPort,logger)
     testCases = getTestCases(cfg.get('app', 'testfiles'))
     for test in testCases:
-    	executeTestCase(riak, test)
+    	executeTestCase(riak, test,gap)
     	
 
     logger.info('Ending Run: '+currentDayStr()+'  ==============================')

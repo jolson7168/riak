@@ -5,7 +5,7 @@
 
 [app]
 TESTFILES=../data/TC1_4hrCoverage.csv
-
+GAP=60000
 ;----------------------------------------------------------
 ; Configures the settings for the Riak cluster
 ;

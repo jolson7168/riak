@@ -87,20 +87,21 @@ def getCoverage(coverage, t1, t2):
 
 
 
-def calculateCoverage(testcases, outputFile, t1, t2, interval):
+def calculateCoverage(testcases, outputFile, tcName, t1, t2, interval):
 	coverage=[]
 	coverage = importData(testcases)
 	f = open(outputFile, 'w')
-
+	x=1
 	for thisID in coverage:
 		for thisInterval in range(t1, t2, interval):
 			thisCoverage=getCoverage(thisID.coverage, thisInterval, thisInterval+interval)
-			print(thisID.bucket+"|"+str(thisInterval)+"|"+str(thisInterval+interval)+"|"+dumpCoverage(thisCoverage), file = f)
+			print(thisID.bucket+"|"+tcName+"_"+str(x)+"|"+str(thisInterval)+"|"+str(thisInterval+interval)+"|"+dumpCoverage(thisCoverage), file = f)
+			x=x+1
 	f.close()
 
 
 
 # every 4 hours 4*60*60*1000, starting Jan 01, 2015 at midnight...
-calculateCoverage("../data/TestCase1.csv", "../data/TC1_4hrCoverage.csv",1420092000000, 1451613600000, 4*60*60*1000)
+calculateCoverage("../data/TestCase1.csv", "../data/TC1_4hrCoverage.csv","TC1_4hrCoverage",1420092000000, 1451613600000, 4*60*60*1000)
 #calculateCoverage("../data/TestCase1.csv", "/tmp/TC1_4hrCoverage.csv",1420092000000, 1420178400000, 4*60*60*1000)
 

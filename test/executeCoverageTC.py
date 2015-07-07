@@ -57,12 +57,11 @@ def currentDayStr():
 def currentTimeStr():
     return time.strftime("%H:%M:%S")
 
-def initLog():
+def initLog(rightNow):
     logger = logging.getLogger(cfg.get('logging', 'logname'))
     logPath=cfg.get('logging', 'logPath')
     logFilename=cfg.get('logging', 'logFileName')
-    dateStr=time.strftime("%Y%m%d%H%M%S")
-    hdlr = logging.FileHandler(logPath+dateStr+logFilename)
+    hdlr = logging.FileHandler(logPath+rightNow+logFilename)
     formatter = logging.Formatter(cfg.get('logging', 'logFormat'),cfg.get('logging', 'logTimeFormat'))
     hdlr.setFormatter(formatter)
     logger.addHandler(hdlr) 
@@ -75,18 +74,18 @@ def getTestCases(tc):
 		cases.append(eachTC)
 	return cases
 
-def executeTestCase(riak, test,gap):
+def executeTestCase(riak, test,gap, runName):
 	try:
 		ifile  = open(test, "r")
 		reader = csv.reader(ifile,delimiter='|')
 		for row in reader:
 			startTime = time.time()
-			results = riakLib.calculateCoverage(riak, row[0],int(row[1]),int(row[2]),gap)
+			results = riakLib.calculateCoverage(riak, row[0],int(row[2]),int(row[3]),gap)
 			duration = round((time.time() - startTime),3)
-			results2 = compareArrays(results, row[3])
-			logger.info("Dur: "+str(duration)+" Results: "+ results2)
+			results2 = compareArrays(results, row[4])
+			logger.info("Run: "+str(runName)+" TC: "+row[1]+" Dur: "+str(duration)+" Results: "+ results2)
 			if results2 == "FAIL":
-				logger.info("   Got: "+dumpCoverage(results)+"   Expected: "+row[3])			
+				logger.info("   Got: "+dumpCoverage(results)+"   Expected: "+row[4])			
 	except Exception as e:
 		print ("Error loading test data: "+e.message)
 
@@ -107,8 +106,8 @@ if __name__ == '__main__':
 
     cfg = RawConfigParser()
     cfg.read(args.file)
- 
-    logger = initLog()
+    rightNow = time.strftime("%Y%m%d%H%M%S")
+    logger = initLog(rightNow)
     logger.info('Starting Run: '+currentDayStr()+'  ==============================')
 
     gap = int(cfg.get('app', 'gap'))
@@ -117,7 +116,7 @@ if __name__ == '__main__':
     riak = riakLib.configureRiak(riakIP, riakPort,logger)
     testCases = getTestCases(cfg.get('app', 'testfiles'))
     for test in testCases:
-    	executeTestCase(riak, test,gap)
+    	executeTestCase(riak, test,gap, rightNow)
     	
 
     logger.info('Ending Run: '+currentDayStr()+'  ==============================')

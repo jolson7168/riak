@@ -23,7 +23,8 @@ PORT=8087
 ;  LOGFORMAT            : format for the log line
 ;  LOGNAME              : name of the log
 [logging]
-logFile=/media/USB1/mine/git/public/riak/logs/coverageTest.log
+logPath=<Path to log file>
+logFileName=coverageTest.log  ; Will be preappended with timestamp
 logTimeFormat=%Y-%m-%d %H:%M:%S
 logFormat=%(asctime)s %(levelname)s %(message)s
 logname="coverage"

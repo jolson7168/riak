@@ -59,7 +59,10 @@ def currentTimeStr():
 
 def initLog():
     logger = logging.getLogger(cfg.get('logging', 'logname'))
-    hdlr = logging.FileHandler(cfg.get('logging', 'logFile'))
+    logPath=cfg.get('logging', 'logPath')
+    logFilename=cfg.get('logging', 'logFileName')
+    dateStr=time.strftime("%Y%m%d%H%M%S")
+    hdlr = logging.FileHandler(logPath+dateStr+logFilename)
     formatter = logging.Formatter(cfg.get('logging', 'logFormat'),cfg.get('logging', 'logTimeFormat'))
     hdlr.setFormatter(formatter)
     logger.addHandler(hdlr) 

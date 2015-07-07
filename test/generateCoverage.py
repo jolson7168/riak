@@ -102,6 +102,7 @@ def calculateCoverage(testcases, outputFile, tcName, t1, t2, interval):
 
 
 # every 4 hours 4*60*60*1000, starting Jan 01, 2015 at midnight...
-calculateCoverage("../data/TestCase1.csv", "../data/TC1_4hrCoverage.csv","TC1_4hrCoverage",1420092000000, 1451613600000, 4*60*60*1000)
-#calculateCoverage("../data/TestCase1.csv", "/tmp/TC1_4hrCoverage.csv",1420092000000, 1420178400000, 4*60*60*1000)
+#calculateCoverage("../data/TestCase1.csv", "../data/TC1_4hrCoverage.csv","TC1_4hrCoverage",1420092000000, 1451613600000, 4*60*60*1000)
+# every 8 hours 8*60*60*1000, starting Jan 01, 2015 at midnight...
+calculateCoverage("../data/TestCase1.csv", "../data/TC1_8hrCoverage.csv","TC1_8hrCoverage",1420092000000, 1451613600000, 8*60*60*1000)
 

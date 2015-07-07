@@ -56,8 +56,6 @@ def generateData(testParams):
 	currentMonitorStatus = True
 	offset=0
 	while currentTime<endTime:
-		#dumpIntervalStatus(monitorStatus, currentTime, "%Y-%m-%d %H:%M:%S", testParams["multiplier"])
-
 		if ((offset>=onTime) and (monitorStatus)) or ((offset>=offTime) and (not monitorStatus)):
 			offset=0
 			monitorStatus = not monitorStatus
@@ -66,7 +64,7 @@ def generateData(testParams):
 		if monitorStatus != currentMonitorStatus:
 			if not monitorStatus:
 				data.append(str(uniqueID).upper()+", "+str(newStartTime)+", "+str(currentTime)+", "+str(interval)+", "+str(int(payload)))
-			newStartTime = currentTime+interval
+			newStartTime = currentTime #+interval
 			currentMonitorStatus=monitorStatus
 
 		currentTime = currentTime+interval

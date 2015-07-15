@@ -40,9 +40,11 @@ def currentDayStr():
 def currentTimeStr():
     return time.strftime("%H:%M:%S")
 
-def initLog():
+def initLog(rightNow):
     logger = logging.getLogger(cfg.get('logging', 'logname'))
-    hdlr = logging.FileHandler(cfg.get('logging', 'logFile'))
+    logPath=cfg.get('logging', 'logPath')
+    logFilename=cfg.get('logging', 'logFileName')
+    hdlr = logging.FileHandler(logPath+rightNow+logFilename)
     formatter = logging.Formatter(cfg.get('logging', 'logFormat'),cfg.get('logging', 'logTimeFormat'))
     hdlr.setFormatter(formatter)
     logger.addHandler(hdlr) 
@@ -71,8 +73,8 @@ if __name__ == '__main__':
 
     cfg = RawConfigParser()
     cfg.read(args.file)
- 
-    logger = initLog()
+    rightNow = time.strftime("%Y%m%d%H%M%S")
+    logger = initLog(rightNow)
     logger.info('Starting Run: '+currentDayStr()+'  ==============================')
 
     msgQServerURL = cfg.get('rabbitmq', 'server_url')

@@ -147,19 +147,20 @@ def calculateCoverage2(riak, bucketName, startTime, endTime, gap):
 	retval = []
 	bucket = riak.bucket(bucketName)
 
-	lastStart=None
-	startArray=keysToArray(bucket.get_index('start_int', 0, startTime))
-	if len(startArray)>1:
-		lastStart=startArray[len(startArray)-1]
-	elif len(startArray)==1:	
-		lastStart=startArray[0]  #1?
+	#lastStart=None
 
-	if lastStart is not None:
-		if startTime in lastStart:
-			addOne=[]
-			addOne.append(startTime)
-			addOne.append(lastStart[1])
-			coverageArray.append(addOne)
+	#startArray=keysToArray(bucket.get_index('start_int', 0, startTime))
+	#if len(startArray)>1:
+	#	lastStart=startArray[len(startArray)-1]
+	#elif len(startArray)==1:	
+	#	lastStart=startArray[0]  #1?
+
+	#if lastStart is not None:
+	#	if startTime in lastStart:
+	#		addOne=[]
+	#		addOne.append(startTime)
+	#		addOne.append(lastStart[1])
+	#		coverageArray.append(addOne)
 
 	#Get the middle...
 	greaterThanStart=keysToArray(bucket.get_index('start_int', startTime,endTime))
@@ -168,13 +169,13 @@ def calculateCoverage2(riak, bucketName, startTime, endTime, gap):
 	coverageArray.extend(sorted(common))
 
 	#Check the end point...
-	endArray=keysToArray(bucket.get_index('end_int', endTime, endTime+600000))
-	if len(endArray)>0:
-		if endTime in endArray[0]:
-			addOne=[]
-			addOne.append(endArray[0][0])
-			addOne.append(endTime)
-			coverageArray.append(addOne)
+	#endArray=keysToArray(bucket.get_index('end_int', endTime, endTime+600000))
+	#if len(endArray)>0:
+	#	if endTime in endArray[0]:
+	#		addOne=[]
+	#		addOne.append(endArray[0][0])
+	#		addOne.append(endTime)
+	#		coverageArray.append(addOne)
 
 	retval = cleanupArray(coverageArray,gap)
 	return retval

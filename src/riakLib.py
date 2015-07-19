@@ -101,24 +101,17 @@ def cleanupArray2(coverage,gap):
 			retval.append(newOne)
 
 	return retval
-
+    
 def cleanupArray(startTime, endTime, coverage,gap):
     retval = []
     currentStart = 0
     x=0 
     while x < (len(coverage)-1):
-        if currentStart == 0:
+        if currentStart == 0: 
             if ((startTime>=coverage[x][0]) and (startTime<=coverage[x][1])):
-                newOne=[]
-                newOne.append(startTime)
-                newOne.append(coverage[x][1])
-                retval.append(newOne)
+            	currentStart = startTime
             elif (startTime<=coverage[x][0]):
-                newOne=[]
-                newOne.append(coverage[x][0])
-                newOne.append(coverage[x][1])
-                retval.append(newOne)
-            currentStart = coverage[x][0]
+            	currentStart = coverage[x][0]
         elif ((coverage[x+1][0] - coverage[x][1]) > gap):
             currentEnd = coverage[x][1]
             newOne=[]
@@ -128,16 +121,16 @@ def cleanupArray(startTime, endTime, coverage,gap):
             currentStart=coverage[x+1][0]
         x=x+1
     if currentStart>0:
-        if (endTime>=coverage[x][0] and endTime<=coverage[x][1]):
-            newOne=[]
-            newOne.append(coverage[x][0])
-            newOne.append(endTime)
-            retval.append(newOne)            
-        else:
-            newOne=[]
-            newOne.append(currentStart)
-            newOne.append(coverage[x][1])
-            retval.append(newOne)
+    	if ((endTime>=coverage[x][0]) and (endTime<=coverage[x][1])):
+    		newOne=[]
+    		newOne.append(coverage[x][0])
+    		newOne.append(endTime)
+    		retval.append(newOne)
+    	else:
+			newOne=[]
+			newOne.append(currentStart)
+			newOne.append(coverage[x][1])
+			retval.append(newOne)
 
     return retval
 

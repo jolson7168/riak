@@ -164,7 +164,7 @@ def calculateCoverage2(riak, bucketName, startTime, endTime, gap):
 
 	#Get the middle...
 	greaterThanStart=keysToArray(bucket.get_index('start_int', startTime,endTime))
-	lessThanEnd=keysToArray(bucket.get_index('end_int', startTime,endTime))
+	lessThanEnd=keysToArray(bucket.get_index('end_int', startTime,endTime+(1000*60*60*24))
 	common = set(map(tuple, greaterThanStart)) & set(map(tuple, lessThanEnd))
 	coverageArray.extend(sorted(common))
 

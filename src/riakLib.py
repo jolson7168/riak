@@ -140,6 +140,46 @@ def calculateCoverage(riak, bucketName, startTime, endTime, gap):
 	retval = cleanupArray(coverageArray,gap)
 	return retval
 
+
+def calculateCoverage2(riak, bucketName, startTime, endTime, gap):
+
+	coverageArray=[]
+	retval = []
+	bucket = riak.bucket(bucketName)
+
+	lastStart=None
+	startArray=keysToArray(bucket.get_index('start_int', 0, startTime))
+	if len(startArray)>1:
+		lastStart=startArray[len(startArray)-1]
+	elif len(startArray)==1:	
+		lastStart=startArray[0]  #1?
+
+	if lastStart is not None:
+		if startTime in lastStart:
+			addOne=[]
+			addOne.append(startTime)
+			addOne.append(lastStart[1])
+			coverageArray.append(addOne)
+
+	#Get the middle...
+	greaterThanStart=keysToArray(bucket.get_index('start_int', startTime,endTime))
+	lessThanEnd=keysToArray(bucket.get_index('end_int', startTime,endTime))
+	common = set(map(tuple, greaterThanStart)) & set(map(tuple, lessThanEnd))
+	coverageArray.extend(sorted(common))
+
+	#Check the end point...
+	endArray=keysToArray(bucket.get_index('end_int', endTime, endTime+600000))
+	if len(endArray)>0:
+		if endTime in endArray[0]:
+			addOne=[]
+			addOne.append(endArray[0][0])
+			addOne.append(endTime)
+			coverageArray.append(addOne)
+
+	retval = cleanupArray(coverageArray,gap)
+	return retval
+
+
 def configureRiak(riakIPs, riakPort,logger):
 
 

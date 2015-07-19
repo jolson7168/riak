@@ -80,7 +80,7 @@ def executeTestCase(riak, test,gap, runName):
 		reader = csv.reader(ifile,delimiter='|')
 		for row in reader:
 			startTime = time.time()
-			results = riakLib.calculateCoverage(riak, row[0],int(row[2]),int(row[3]),gap)
+			results = riakLib.calculateCoverage2(riak, row[0],int(row[2]),int(row[3]),gap)
 			duration = round((time.time() - startTime),3)
 			results2 = compareArrays(results, row[4])
 			logger.info("Run: "+str(runName)+" TC: "+row[1]+" Dur: "+str(duration)+" Results: "+ results2)
@@ -97,6 +97,10 @@ def getCmdLineParser():
     parser.add_argument('-f', '--file', default='../config/coverageTestCases_config',
                         help='optional configuration file name (*.ini format)')
 
+    parser.add_argument('-c', '--comment', default='', nargs = '+',
+                        help='optional comment to be inserted into log')
+    #args = parser.parse_args(sys.argv[2:])
+
     return parser
 
 if __name__ == '__main__':
@@ -109,7 +113,7 @@ if __name__ == '__main__':
     rightNow = time.strftime("%Y%m%d%H%M%S")
     logger = initLog(rightNow)
     logger.info('Starting Run: '+currentDayStr()+'  ==============================')
-
+    logger.info('Comment: '+' '.join(args.comment))
     gap = int(cfg.get('app', 'gap'))
     riakIP = cfg.get('riak', 'cluster')
     riakPort = cfg.get('riak', 'port')
@@ -120,10 +124,6 @@ if __name__ == '__main__':
     	
 
     logger.info('Ending Run: '+currentDayStr()+'  ==============================')
-
-
-
-
 
 
 	

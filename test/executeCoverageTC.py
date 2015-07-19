@@ -80,7 +80,7 @@ def executeTestCase(riak, test,gap, runName):
 		reader = csv.reader(ifile,delimiter='|')
 		for row in reader:
 			startTime = time.time()
-			results = riakLib.calculateCoverage2(riak, row[0],int(row[2]),int(row[3]),gap)
+			results = riakLib.calculateCoverage(riak, row[0],int(row[2]),int(row[3]),gap)
 			duration = round((time.time() - startTime),3)
 			results2 = compareArrays(results, row[4])
 			logger.info("Run: "+str(runName)+" TC: "+row[1]+" Dur: "+str(duration)+" Results: "+ results2)
@@ -99,7 +99,6 @@ def getCmdLineParser():
 
     parser.add_argument('-c', '--comment', default='', nargs = '+',
                         help='optional comment to be inserted into log')
-    #args = parser.parse_args(sys.argv[2:])
 
     return parser
 

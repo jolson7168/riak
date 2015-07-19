@@ -79,13 +79,17 @@ def modifyBlocks(riak, action, pid, startTime, endTime, interval,payload,logger)
 		index={"start_int":int(x),"end_int":int(x+interval)}
 		writeRiak(riak, action, pid, str(x)+":"+str(x+interval), writePayload,mimeType,logger, index)
 
-def cleanupArray2(coverage,gap):
+
+def cleanupArray(startTime, endTime, coverage,gap):
 	retval = []
 	currentStart = 0
 	x=0 
 	while x < (len(coverage)-1):
 		if currentStart == 0:
-			currentStart = coverage[x][0]
+			if ((startTime>=coverage[x][0]) and (startTime<=coverage[x][1])):
+				currentStart = startTime
+			else:
+				currentStart = coverage[x][0]
 		if ((coverage[x+1][0] - coverage[x][1]) > gap):
 			currentEnd = coverage[x][1]
 			newOne=[]
@@ -95,44 +99,16 @@ def cleanupArray2(coverage,gap):
 			currentStart=coverage[x+1][0]
 		x=x+1
 	if currentStart>0:
-			newOne=[]
-			newOne.append(currentStart)
-			newOne.append(coverage[x][1])
-			retval.append(newOne)
+		if ((endTime>=coverage[x][0]) and (endTime<=coverage[x][1])):
+			theEnd = endTime
+		else:
+			theEnd = coverage[x][1]
+		newOne=[]
+		newOne.append(currentStart)
+		newOne.append(theEnd)
+		retval.append(newOne)
 
 	return retval
-    
-def cleanupArray(startTime, endTime, coverage,gap):
-    retval = []
-    currentStart = 0
-    x=0 
-    while x < (len(coverage)-1):
-        if currentStart == 0: 
-            if ((startTime>=coverage[x][0]) and (startTime<=coverage[x][1])):
-            	currentStart = startTime
-            elif (startTime<=coverage[x][0]):
-            	currentStart = coverage[x][0]
-        elif ((coverage[x+1][0] - coverage[x][1]) > gap):
-            currentEnd = coverage[x][1]
-            newOne=[]
-            newOne.append(currentStart)
-            newOne.append(currentEnd)
-            retval.append(newOne)
-            currentStart=coverage[x+1][0]
-        x=x+1
-    if currentStart>0:
-    	if ((endTime>=coverage[x][0]) and (endTime<=coverage[x][1])):
-    		newOne=[]
-    		newOne.append(coverage[x][0])
-    		newOne.append(endTime)
-    		retval.append(newOne)
-    	else:
-			newOne=[]
-			newOne.append(currentStart)
-			newOne.append(coverage[x][1])
-			retval.append(newOne)
-
-    return retval
 
 def calculateCoverage(riak, bucketName, startTime, endTime, gap):
 
@@ -140,74 +116,11 @@ def calculateCoverage(riak, bucketName, startTime, endTime, gap):
 	retval = []
 	bucket = riak.bucket(bucketName)
 
-	lastStart=None
-	startArray=keysToArray(bucket.get_index('start_int', 0, startTime))
-	if len(startArray)>1:
-		lastStart=startArray[len(startArray)-1]
-	elif len(startArray)==1:	
-		lastStart=startArray[0]  #1?
 
-	if lastStart is not None:
-		if startTime in lastStart:
-			addOne=[]
-			addOne.append(startTime)
-			addOne.append(lastStart[1])
-			coverageArray.append(addOne)
-
-	#Get the middle...
-	greaterThanStart=keysToArray(bucket.get_index('start_int', startTime,10000000000000))
-	lessThanEnd=keysToArray(bucket.get_index('end_int', 0,endTime))
-	common = set(map(tuple, greaterThanStart)) & set(map(tuple, lessThanEnd))
-	coverageArray.extend(sorted(common))
-
-	#Check the end point...
-	endArray=keysToArray(bucket.get_index('end_int', endTime, 10000000000000))
-	if len(endArray)>0:
-		if endTime in endArray[0]:
-			addOne=[]
-			addOne.append(endArray[0][0])
-			addOne.append(endTime)
-			coverageArray.append(addOne)
-
-	retval = cleanupArray(coverageArray,gap)
-	return retval
-
-
-def calculateCoverage2(riak, bucketName, startTime, endTime, gap):
-
-	coverageArray=[]
-	retval = []
-	bucket = riak.bucket(bucketName)
-
-	#lastStart=None
-
-	#startArray=keysToArray(bucket.get_index('start_int', 0, startTime))
-	#if len(startArray)>1:
-	#	lastStart=startArray[len(startArray)-1]
-	#elif len(startArray)==1:	
-	#	lastStart=startArray[0]  #1?
-
-	#if lastStart is not None:
-	#	if startTime in lastStart:
-	#		addOne=[]
-	#		addOne.append(startTime)
-	#		addOne.append(lastStart[1])
-	#		coverageArray.append(addOne)
-
-	#Get the middle...
 	greaterThanStart=keysToArray(bucket.get_index('start_int', startTime,endTime))
 	lessThanEnd=keysToArray(bucket.get_index('end_int', startTime,endTime))
 	common = set(map(tuple, greaterThanStart)) | set(map(tuple, lessThanEnd))
 	coverageArray.extend(sorted(common))
-
-	#Check the end point...
-	#endArray=keysToArray(bucket.get_index('end_int', endTime, endTime+600000))
-	#if len(endArray)>0:
-	#	if endTime in endArray[0]:
-	#		addOne=[]
-	#		addOne.append(endArray[0][0])
-	#		addOne.append(endTime)
-	#		coverageArray.append(addOne)
 
 	retval = cleanupArray(startTime, endTime, coverageArray,gap)
 	return retval

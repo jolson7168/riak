@@ -2,11 +2,9 @@ import uuid
 import time
 import datetime
 
-# ratio: ~1.2MB/10 minutes
-# ~120kb / min
-
 
 def getTimeOffset(interval, units):
+
 	if units=="minutes":
 		retval=interval*60*1000
 	elif units=="seconds":
@@ -41,6 +39,12 @@ def calculatePayload(size, units):
 		payloadSize=size*1024*1024
 	return payloadSize
 
+def getStrict(strictParam):
+	if strictParam=="False":
+		return False
+	else:
+		return True
+
 def generateData(testParams):
 	uniqueID=uuid.uuid1()
 	data=[]
@@ -50,22 +54,28 @@ def generateData(testParams):
 	onTime = getTimeOffset(testParams["onTime"],testParams["onTimeUnits"]) 
 	offTime = getTimeOffset(testParams["offTime"],testParams["offTimeUnits"])
 	payload = calculatePayload(testParams["size"], testParams["sizeUnits"])
+	strict = getStrict(testParams["strict"])
 	currentTime=startTime
 	newStartTime=startTime
 	monitorStatus = True
 	currentMonitorStatus = True
 	offset=0
+	if not strict:
+		offset = offset+interval
 	while currentTime<endTime:
 		if ((offset>=onTime) and (monitorStatus)) or ((offset>=offTime) and (not monitorStatus)):
 			offset=0
+			if not strict:
+				offset = offset+interval
 			monitorStatus = not monitorStatus
-		offset=offset+interval
 
+		offset=offset+interval
 		if monitorStatus != currentMonitorStatus:
 			if not monitorStatus:
 				data.append(str(uniqueID).upper()+", "+str(newStartTime)+", "+str(currentTime)+", "+str(interval)+", "+str(int(payload)))
 			newStartTime = currentTime #+interval
 			currentMonitorStatus=monitorStatus
+
 
 		currentTime = currentTime+interval
 
@@ -92,25 +102,19 @@ def writeFiles(testParams, data):
 	f.close()
 
 
-testDataInputs={"onTime":8, "onTimeUnits":"hours",
-				"offTime":4, "offTimeUnits":"hours", 
+testDataInputs={"onTime":4, "onTimeUnits":"hours",
+				"offTime":20, "offTimeUnits":"hours",
 				"size":1.2, "sizeUnits":"Mb",
 				"interval":10,"intervalUnits":"minutes", 
 				"duration":365,"durationUnits":"days", 
-				"startTime":"2015-01-01 000000.000", "startTimeMask":"%Y-%m-%d %H%M%S.%f", "multiplier":1000,
-				"testfilename":"TestCase1.csv", "comment":"One patient, one year, 8 hours on, 4 hours off, 1.2mb/10min"}      
+				"strict":"False",
+				"startTime":"2015-01-01 120000.000", "startTimeMask":"%Y-%m-%d %H%M%S.%f", "multiplier":1000,
+				"testfilename":"TestCase4.csv", "comment":"One patient, one year, on from 12-4pm everyday, 1.2mb/10min"}      
 
 
-#print(getTime('2015-01-01 000001.000', "%Y-%m-%d %H%M%S.%f", 1000))
-#   1451628001
 testData = generateData(testDataInputs)
 writeFiles(testDataInputs, testData)
-#print("Test Data........................")
-#for line in testData:
-#	print(line)
-#print("Coverage.........................")
-#for line in coverage
-#	print(line)
+
 
 
 

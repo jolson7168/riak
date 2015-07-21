@@ -73,7 +73,10 @@ def generateData(testParams):
 		if monitorStatus != currentMonitorStatus:
 			if not monitorStatus:
 				data.append(str(uniqueID).upper()+", "+str(newStartTime)+", "+str(currentTime)+", "+str(interval)+", "+str(int(payload)))
-			newStartTime = currentTime #+interval
+			if not strict:
+				currentTime = currentTime +interval
+				
+			newStartTime = currentTime
 			currentMonitorStatus=monitorStatus
 
 

@@ -2,6 +2,7 @@ import uuid
 import time
 import datetime
 
+#fixed to include offsets....
 
 def getTimeOffset(interval, units):
 
@@ -75,7 +76,7 @@ def generateData(testParams):
 				data.append(str(uniqueID).upper()+", "+str(newStartTime)+", "+str(currentTime)+", "+str(interval)+", "+str(int(payload)))
 			if not strict:
 				currentTime = currentTime +interval
-				
+
 			newStartTime = currentTime
 			currentMonitorStatus=monitorStatus
 

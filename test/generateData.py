@@ -3,6 +3,7 @@ import time
 import datetime
 
 #fixed to include offsets....
+#and startdate....
 
 def getTimeOffset(interval, units):
 

@@ -7,7 +7,7 @@ import time
 from riak import RiakClient
 from riak import RiakObject
 
-
+# added keys toArray
 def keysToArray(keys):
 	tempArray=[]
 	#logger.info("Keys: "+str(len(keys)))

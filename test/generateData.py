@@ -107,14 +107,25 @@ def writeFiles(testParams, data):
 	f.close()
 
 
-testDataInputs={"onTime":4, "onTimeUnits":"hours",
-				"offTime":20, "offTimeUnits":"hours",
+#testDataInputs={"onTime":4, "onTimeUnits":"hours",
+#				"offTime":20, "offTimeUnits":"hours",
+#				"size":1.2, "sizeUnits":"Mb",
+#				"interval":10,"intervalUnits":"minutes", 
+#				"duration":365,"durationUnits":"days", 
+#				"strict":"False",
+#				"startTime":"2015-01-01 120000.000", "startTimeMask":"%Y-%m-%d %H%M%S.%f", "multiplier":1000,
+#				"testfilename":"TestCase4.csv", "comment":"One patient, one year, on from 12-4pm everyday, 1.2mb/10min"}      
+
+testDataInputs={"onTime":96, "onTimeUnits":"hours",
+				"offTime":24, "offTimeUnits":"hours",
 				"size":1.2, "sizeUnits":"Mb",
 				"interval":10,"intervalUnits":"minutes", 
 				"duration":365,"durationUnits":"days", 
 				"strict":"False",
+				"generateUUID":"False",
 				"startTime":"2015-01-01 120000.000", "startTimeMask":"%Y-%m-%d %H%M%S.%f", "multiplier":1000,
-				"testfilename":"TestCase4.csv", "comment":"One patient, one year, on from 12-4pm everyday, 1.2mb/10min"}      
+				"testfilename":"profile5.csv", "comment":"4 days on, 1 day off starting midnight 01 Jan 2015, for one year, 1.2mb/10min"}   
+
 
 
 testData = generateData(testDataInputs)

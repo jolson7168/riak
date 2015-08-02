@@ -41,14 +41,13 @@ def calculatePayload(size, units):
 		payloadSize=size*1024*1024
 	return payloadSize
 
-def getStrict(strictParam):
+def getBoolean(booleanParam):
 	if strictParam=="False":
 		return False
 	else:
 		return True
 
 def generateData(testParams):
-	uniqueID=uuid.uuid1()
 	data=[]
 	startTime = getTime(testParams["startTime"],testParams["startTimeMask"],testParams["multiplier"])
 	interval = getTimeOffset(testParams["interval"],testParams["intervalUnits"])
@@ -56,7 +55,8 @@ def generateData(testParams):
 	onTime = getTimeOffset(testParams["onTime"],testParams["onTimeUnits"]) 
 	offTime = getTimeOffset(testParams["offTime"],testParams["offTimeUnits"])
 	payload = calculatePayload(testParams["size"], testParams["sizeUnits"])
-	strict = getStrict(testParams["strict"])
+	strict = getBoolean(testParams["strict"])
+	generateUUID = getBoolean(testParams["generateUUID"])
 	currentTime=startTime
 	newStartTime=startTime
 	monitorStatus = True
@@ -74,7 +74,11 @@ def generateData(testParams):
 		offset=offset+interval
 		if monitorStatus != currentMonitorStatus:
 			if not monitorStatus:
-				data.append(str(uniqueID).upper()+", "+str(newStartTime)+", "+str(currentTime)+", "+str(interval)+", "+str(int(payload)))
+				if generateUUID:
+					data.append(str(uuid.uuid1()).upper()+", "+str(newStartTime)+", "+str(currentTime)+", "+str(interval)+", "+str(int(payload)))
+				else:
+					data.append(str(newStartTime)+", "+str(currentTime)+", "+str(interval)+", "+str(int(payload)))
+
 			if not strict:
 				currentTime = currentTime +interval
 
@@ -105,16 +109,7 @@ def writeFiles(testParams, data):
 	for block in data:
 		f.write(block+"\n")
 	f.close()
-
-
-#testDataInputs={"onTime":4, "onTimeUnits":"hours",
-#				"offTime":20, "offTimeUnits":"hours",
-#				"size":1.2, "sizeUnits":"Mb",
-#				"interval":10,"intervalUnits":"minutes", 
-#				"duration":365,"durationUnits":"days", 
-#				"strict":"False",
-#				"startTime":"2015-01-01 120000.000", "startTimeMask":"%Y-%m-%d %H%M%S.%f", "multiplier":1000,
-#				"testfilename":"TestCase4.csv", "comment":"One patient, one year, on from 12-4pm everyday, 1.2mb/10min"}      
+ 
 
 testDataInputs={"onTime":96, "onTimeUnits":"hours",
 				"offTime":24, "offTimeUnits":"hours",

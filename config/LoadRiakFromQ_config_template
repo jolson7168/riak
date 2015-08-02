@@ -2,7 +2,7 @@
 ; Configures the settings for the RabbitMQ server
 ;
 ;  SERVER_URL    : base URL for RabbitMQ server
-;  DATA_QUEUE    : queue name for binary files extraction
+;  QUEUE    	 : queue name for binary files extraction
 ;                  messages
 [rabbitmq]
 SERVER_URL=<rabbit server IP>
@@ -14,8 +14,10 @@ PASSWORD=<rabbit password>
 ;
 ;  HOME    	 : list of IP address of cluster nodes
 ;  PORT    	 : port riak is running on
+;  TARGET	 : riak node to target writes to 
 [riak]
 CLUSTER=<cluster IPs comman delimited>
+TARGET=<IP Address>
 PORT=8087
 
 ;----------------------------------------------------------
@@ -26,7 +28,8 @@ PORT=8087
 ;  LOGFORMAT            : format for the log line
 ;  LOGNAME              : name of the log
 [logging]
-logFile=../logs/LoadRiakFromQ.log
+logPath=../logs/
+logFileName=loadKeys.log
 logTimeFormat=%Y-%m-%d %H:%M:%S
 logFormat=%(asctime)s %(levelname)s %(message)s
 logname="LoadRiakFromQ"

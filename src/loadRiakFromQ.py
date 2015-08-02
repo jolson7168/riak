@@ -84,7 +84,7 @@ if __name__ == '__main__':
 
 
 
-    riakIP = cfg.get('riak', 'cluster')
+    riakIP = cfg.get('riak', 'target')
     riakPort = cfg.get('riak', 'port')
     riak = riakLib.configureRiak(riakIP, riakPort,logger)
 

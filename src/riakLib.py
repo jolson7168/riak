@@ -86,8 +86,8 @@ def modifyBlocks(riak, action, pid, startTime, endTime, interval,payload,logger)
 			except Exception as e:
 				num_attempts += 1
 				logger.info("Error writing to Riak. Attempt: "+str(num_attempts))
-				time.sleep(5)   #wait 10 seconds
-				if num_attempts==5:
+				time.sleep(30)   #wait 10 seconds
+				if num_attempts==10:
 					written = True
 					logger.info("Cannot write to Riak after "+str(num_attempts)+" attempts. Moving on.")
 

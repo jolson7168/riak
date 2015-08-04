@@ -89,7 +89,7 @@ def modifyBlocks(riak, action, pid, startTime, endTime, interval,payload,logger)
 				time.sleep(5)   #wait 10 seconds
 				if num_attempts==5:
 					written = True
-					logger.info("Cannot write to Riak after "+str(num_attempts)+" attempts. Moving on."
+					logger.info("Cannot write to Riak after "+str(num_attempts)+" attempts. Moving on.")
 
 
 def cleanupArray(startTime, endTime, coverage,gap):
